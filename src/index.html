@@ -16,7 +16,9 @@
     <meta name="description" content="Test">
     <title>AKQA Test - HossamEissa</title>
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
-    <link href="all.css" rel="stylesheet" type="text/css" />
+    <link href="./css/fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -25,15 +27,15 @@
             <div class="header-top">
                 <div class="container">
                     <div class="row">
-                        <div class="logo" data-aos="fade-right">
+                        <div class="logo js-scroll slide-right">
                             <a href="/" title="Home">
                                 <img src="./images/DermaWorld.png" alt="main logo" width="158">
                             </a>
                         </div>
-                        <div class="header-search" data-aos="fade-left">
+                        <div class="header-search js-scroll slide-left">
                             <input class="searched" type="text" name="Search" id="search" placeholder="Search">
                         </div>
-                        <label id="menu-toggler" for="menu" data-aos="fade-left">
+                        <label id="menu-toggler" for="menu" class="js-scroll slide-left">
                             <div class="menu-bar"></div>
                             <div class="menu-bar"></div>
                             <div class="menu-bar"></div>
@@ -41,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-nav" data-aos="fade-down">
+            <div class="header-nav js-scroll fade-in">
                 <div class="container">
                     <nav role='navigation' class="menu">
                         <input type="checkbox" id="menu">
@@ -51,19 +53,20 @@
                                 <a href="#">Behandlugen
                                     <label title="toggle menu" for="about">
                                         <i class="fa fa-caret-down"></i>
+                                        <span class="icon-arrow-down"></span>
+
                                     </label>
                                 </a>
                                 <input type="checkbox" id="about">
                                 <ul class="menu-dropdown">
-                                    <li><a href="">History</a></li>
-                                    <li><a href="">Mission</a></li>
+                                    <li><a href="" class="menu-item">History</a></li>
+                                    <li><a href="" class="menu-item">Mission</a></li>
                                     <li class="menu-hasdropdown menu-hasflyout levl-two-menu">
-                                        <a href="">Services
+                                        <span class="menu-item">Services
                                             <label title="toggle menu" for="services">
                                                 <span class="icon-arrow-down"></span>
-                                                <span class="icon-arrow-up"></span>
                                             </label>
-                                        </a>
+                                        </span>
                                         <input type="checkbox" id="services">
                                         <ul class="menu-dropdown">
                                             <li><a href="">Service 1</a></li>
@@ -156,17 +159,17 @@
             <section class="how-work">
                 <div class="container">
                     <div class="row">
-                        <div class="image" data-aos="fade-up-right">
+                        <div class="image js-scroll slide-left">
                             <picture>
                                 <img tabindex="0" alt="..." src="./images/second-section.png">
                             </picture>
                         </div>
-                        <div class="content">
-                            <h2 class="section-title" tabindex="0" data-aos="fade-left">It is the first and only
+                        <div class="content js-scroll slide-right">
+                            <h2 class="section-title" tabindex="0">It is the first and only
                                 biologic developed
                                 to specifically neutralize IL-13, a key driver of atopic dermatitis signs and
                                 symptoms(1,2)</h2>
-                            <p class="section-subtitle" tabindex="0" data-aos="fade-right">Learn more about how
+                            <p class="section-subtitle" tabindex="0">Learn more about how
                                 Adtralza® works and
                                 how to use it in treatment.</p>
                         </div>
@@ -178,7 +181,7 @@
             <section class="tips-section">
                 <div class="container">
                     <article class="row">
-                        <article class="tips-item" data-aos="fade-up-right">
+                        <article class="tips-item js-scroll slide-left">
                             <div class="tip-shape">
                                 <h2 class="num">9</h2>
                                 <span class="text">out of 10</span>
@@ -191,7 +194,7 @@
                             <a href="#" class="tip-link">See efficacy and trial data</a>
                         </article>
                         <!--2-->
-                        <article class="tips-item" data-aos="fade-up">
+                        <article class="tips-item js-scroll fade-in-bottom">
                             <div class="tip-shape">
                                 <span class="icon-hand-heart"></span>
                             </div>
@@ -202,7 +205,7 @@
                             <a href="#" class="tip-link">Learn more about quality of life improvements</a>
                         </article>
                         <!--3-->
-                        <article class="tips-item" data-aos="fade-up-left">
+                        <article class="tips-item  js-scroll slide-left">
                             <div class="tip-shape">
                                 <span class="icon-hand-shield"></span>
                             </div>
@@ -221,28 +224,30 @@
                 <div class="container">
                     <div class="neturalizes-container">
                         <div class="content-side">
-                            <h2 class="section-title" data-aos="fade-left">Adtralza® neutralizes IL-13, a key driver of
+                            <h2 class="section-title js-scroll scroll-left">Adtralza® neutralizes IL-13, a key driver of
                                 Atopic
                                 Dermatitis signs and symptoms.</h2>
-                            <p data-aos="fade-up">By specifically targeting the IL-13 cytokine, Adtralza® inhibits the
+                            <p class="js-scroll fade-in-bottom">By specifically targeting the IL-13 cytokine, Adtralza®
+                                inhibits the
                                 interaction with
                                 type II
                                 receptors and prevents IL-13-induced inflammatory responses in the skin(1,2).</p>
-                            <p data-aos="fade-left">Adtralza® selectively modulates the dysregulated immune system
+                            <p class="js-scroll slide-left">Adtralza® selectively modulates the dysregulated immune
+                                system
                                 by(1):</p>
                             <ul class="dashed-list">
-                                <li data-aos="fade-up-left">Reducing markers of skin inflammation</li>
-                                <li data-aos="fade-up">Improving markers of skin barrier integrity</li>
-                                <li data-aos="fade-up-right">Reducing epidermal thickness</li>
+                                <li class="js-scroll slide-left">Reducing markers of skin inflammation</li>
+                                <li class="js-scroll fade-in-bottom">Improving markers of skin barrier integrity</li>
+                                <li class="js-scroll slide-right">Reducing epidermal thickness</li>
                             </ul>
-                            <div data-aos="fade-right">
+                            <div class="js-scroll slide-right">
                                 <a href="https://www.youtube.com/watch?v=V5M2WZiAy6k&ab_channel=ImagineDragonsVEVO"
                                     data-type="iframe" data-fancybox="" class="btn primary">Watch the
                                     video</a>
                             </div>
-                            <p class="duration" data-aos="fade-up">Duration: 2:43</p>
+                            <p class="duration js-scroll fade-in-bottom">Duration: 2:43</p>
                         </div>
-                        <div class="pic-side" data-aos="fade-up">
+                        <div class="pic-side js-scroll fade-in-bottom">
                             <picture>
                                 <img alt="..." src="./images/neutralizes.png">
                             </picture>
@@ -255,9 +260,10 @@
             <!-- Clinical Tools Section-->
             <section class="clinical-tools">
                 <div class="container">
-                    <h2 class="section-title" data-aos="fade-left">Clinical tools - at a glance</h2>
+                    <h2 class="section-title js-scroll slide-left">Clinical tools - at a
+                        glance</h2>
                     <div class="row">
-                        <div class="card-item" data-aos="fade-up-left">
+                        <div class="card-item js-scroll fade-in-bottom">
                             <div class="card">
                                 <picture>
                                     <!-- <source media="(min-width:650px)" srcset="./images/card-img.jpg">-->
@@ -275,7 +281,7 @@
                             </div>
                         </div>
 
-                        <div class="card-item" data-aos="fade-up-right">
+                        <div class="card-item js-scroll fade-in-bottom">
                             <div class="card">
                                 <picture>
                                     <!-- <source media="(min-width:650px)" srcset="./images/card-img-2.jpg">-->
@@ -301,14 +307,14 @@
             <!-- Kol Videos Section-->
             <section class="kol-videos">
                 <div class="container">
-                    <h2 class="section-title" data-aos="fade-left">Kol Videos - get expert insghts here</h2>
-                    <p class="section-subtitle" data-aos="fade-right">See what Key opinion leaders have to say about
+                    <h2 class="section-title  js-scroll slide-left">Kol Videos - get expert insghts here</h2>
+                    <p class="section-subtitle  js-scroll slide-right">See what Key opinion leaders have to say about
                         their experiences with
                         Adtralza®</p>
 
                     <div class="video-container">
                         <!-- Video Item-->
-                        <div class="video-item" data-aos="fade-up-right">
+                        <div class="video-item js-scroll slide-left">
                             <!-- Video-->
                             <div class="video">
                                 <picture>
@@ -337,7 +343,7 @@
                         </div>
                         <!-- /Video Item-->
                         <!-- Video Item-->
-                        <div class="video-item" data-aos="fade-up-left">
+                        <div class="video-item  js-scroll slide-right">
                             <!-- Video-->
                             <div class="video">
                                 <picture>
@@ -365,7 +371,7 @@
                         </div>
                         <!-- /Video Item-->
                         <!-- Video Item-->
-                        <div class="video-item" data-aos="fade-down-right">
+                        <div class="video-item js-scroll slide-left">
                             <!-- Video-->
                             <div class="video">
                                 <picture>
@@ -393,7 +399,7 @@
                         </div>
                         <!-- /Video Item-->
                         <!-- Video Item-->
-                        <div class="video-item" data-aos="fade-down-left">
+                        <div class="video-item js-scroll slide-right">
                             <!-- Video-->
                             <div class="video">
                                 <picture>
@@ -431,14 +437,14 @@
             <div class="container">
                 <div class="row">
                     <!-- Logo -->
-                    <div class="logo" data-aos="fade-up-right">
+                    <div class="logo js-scroll slide-right">
                         <a href="/">
                             <img src="./images/LEO-logo.png" alt="Footer Logo" width="91" height="91">
                         </a>
                     </div>
                     <!-- /Logo -->
                     <!-- Links footer -->
-                    <div class="footer-menu" data-aos="fade-up"> 
+                    <div class="footer-menu js-scroll fade-in-bottom">
                         <nav>
                             <ul>
                                 <li><a href="/">Contact</a></li>
@@ -453,7 +459,7 @@
                     <!-- /Links footer -->
 
                     <!-- Copy Right -->
-                    <div class="copy-right" data-aos="fade-up-left">
+                    <div class="copy-right js-scroll slide-left">
                         <p>© Copyright LEO Pharma 2020
                             LEO and the LEO Lion Design
                             are registered trademarks
@@ -474,9 +480,7 @@
             <span class="icon-arrow-up"></span>
         </div>
     </div>
-    <script src="all.js"></script>
-    <script src="main.js"></script>
-
+    <script src="../build/all.js"></script>
 </body>
 
 </html>

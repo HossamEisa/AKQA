@@ -12,7 +12,7 @@
    concat = require('gulp-concat');
 
 
-  //  sass = require('gulp-sass');
+ //  sass = require('gulp-sass');
 
  const {
    parallel
@@ -44,13 +44,13 @@
  function minifyJS() {
    return gulp
      .src([
-       'src/js/aos.js',
        'src/js/fancybox.umd.js',
        'src/js/swiper-bundle.min.js',
+       //  custom
        'src/js/navMenu.js',
        'src/js/swiper-custom.js',
        'src/js/backTop.js',
-       'src/js/aos-custom.js',
+       'src/js/scroll-animation.js',
      ])
      .pipe(terser())
      .pipe(concat('all.js'))

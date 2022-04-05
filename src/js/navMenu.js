@@ -26,7 +26,6 @@ if (screen.width > 991) {
 }
 
 
-
 const burgerMenu = document.getElementById("menu-toggler");
 const navbarMenu = document.getElementById("menu");
 

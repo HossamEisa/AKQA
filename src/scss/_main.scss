@@ -2,6 +2,7 @@
 // 1. Configuration and helpers
 ////////////////////////////////////////////////////////
 @import "helpers/directions",
+"helpers/scrolling-animation",
 "abstract/variables",
 "abstract/placeholder",
 "abstract/functions",
@@ -34,8 +35,7 @@
 ////////////////////////////////////////////////////////
 // 5. Components
 ////////////////////////////////////////////////////////
-@import
- "components/custom-helper",
+@import "components/custom-helper",
 "components/buttons",
 "components/tips-item",
 "components/backToTop",

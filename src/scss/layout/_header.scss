@@ -19,17 +19,13 @@
             flex-grow: 1;
             max-width: 100%;
             padding: 0 15px;
-
-            @include mq('lg') {
-                padding: 0;
-            }
         }
 
         label {
             padding: 0 15px;
 
             @include mq('lg') {
-                padding: 0;
+                padding: 10px;
             }
         }
 
@@ -62,8 +58,9 @@
             cursor: pointer;
 
             .menu-bar {
-                width: 40px;
+                width: 35px;
                 height: 5px;
+                border-radius: 10px;
                 background-color: $black;
                 display: block;
                 margin: 8px auto;
@@ -106,14 +103,6 @@
     .header-nav {
         position: relative;
         z-index: 1;
-        /* vars */
-        $menu_background: #035e8d;
-        $menu_color: #e2e2e2;
-        $menu_breakpoint: 992px;
-        $menu_toggle_background: black;
-        $menu_border: 1px solid rgba(255, 255, 255, 0.1);
-        $menu_padding: 15px 20px;
-        $menu_icon_padding: 5px 10px;
 
         .container {
             @media screen and (max-width: 992px) {
@@ -127,10 +116,11 @@
 
         @mixin show () {
             display: block;
-            animation: grow .5s ease-in-out; // optional animation
+            animation: grow 1.5s ease-in-out; // optional animation
 
             @include mq('lg') {
                 display: flex;
+                animation: grow .5s ease-in-out; // optional animation
             }
         }
 
@@ -142,60 +132,64 @@
 
         .menu {
             position: relative;
-        }
-
-        .menu ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            --bold: 700;
-
-        }
-
-        .menu,
-        .menu a {
             color: $black;
             text-decoration: none;
 
-        }
+            ul {
+                margin: 0;
+                --bold: 700;
+                padding: 0;
+                list-style: none;
+            }
 
-        .menu a {
-            display: block;
-            white-space: nowrap; // prevent links form going to a new line
-
-            @include mq('lg') {
-                position: relative;
-                display: inline-flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                padding: 1rem 1.5rem;
-                color: black;
+            a,
+            .menu-item {
+                color: $black;
                 text-decoration: none;
+                display: block;
+                white-space: nowrap; // prevent links form going to a new line
+                cursor: pointer;
 
-                &::after {
-                    content: attr(data-text);
-                    content: attr(data-text) / "";
-                    height: 0;
-                    visibility: hidden;
-                    overflow: hidden;
-                    user-select: none;
-                    pointer-events: none;
-                    font-weight: var(--bold);
+                @include mq('lg') {
+                    position: relative;
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: .5rem 1.5rem;
+                    color: black;
+                    text-decoration: none;
 
-                    @media speech {
+                    .icon-arrow-down {
                         display: none;
+                    }
+
+                    &::after {
+                        content: attr(data-text);
+                        content: attr(data-text) / "";
+                        height: 0;
+                        visibility: hidden;
+                        overflow: hidden;
+                        user-select: none;
+                        pointer-events: none;
+                        font-weight: var(--bold);
+
+                        @media speech {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        font-weight: var(--bold)
                     }
                 }
 
-                &:hover {
-                    font-weight: var(--bold)
-                }
             }
 
-
-
         }
+
+
+
 
         .menu-dropdown,
         .menu input[type="checkbox"] {
@@ -209,7 +203,7 @@
 
         /* narrow styles */
 
-        @media screen and (max-width: $menu_breakpoint) {
+        @media screen and (max-width: 992px) {
 
             // hide navigation and right icons
             .menu>ul,
@@ -224,7 +218,7 @@
 
         /* large styles */
 
-        @media screen and (min-width: $menu_breakpoint) {
+        @media screen and (min-width: 992px) {
 
             // hide show navigation button and checkboxes
             .menu>label,
@@ -233,12 +227,17 @@
             }
 
             .menu a {
-                padding: $menu_padding;
+                padding: 10px 15px 10px 0;
+
+                .icon-arrow-down {
+                    display: none;
+                }
             }
 
             // align items and style them
             .menu>ul>li {
                 display: inline-block;
+                padding: 20px 0;
             }
 
             // hover logics
@@ -249,7 +248,7 @@
                         font-weight: var(--bold);
 
                         &::before {
-                            bottom: 0;
+                            bottom: -20px;
                             left: 50%;
                             border: solid transparent;
                             content: "";
@@ -309,7 +308,7 @@
 
                 >li {
                     z-index: 1;
-                    padding: 25px 19px;
+                    padding: 13px 19px;
 
                     >a {
                         color: $primary;
@@ -373,8 +372,8 @@
         }
 
         .menu-dropdown a {
-            padding: 0;
-            border-bottom: $menu_border;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
             @include mq('lg') {
                 border: none;
@@ -382,34 +381,43 @@
         }
 
         /* narrow  */
-        @media screen and (max-width: $menu_breakpoint) {
-            .menu>label {
-                background: $menu_toggle_background;
-                display: block;
-                padding: $menu_padding;
-                text-align: right;
-                color: #fff;
+        @media screen and (max-width: 992px) {
+            .menu {
+                >label {
+                    background: $black;
+                    display: block;
+                    padding: 10px;
+                    text-align: right;
+                    color: #fff;
+                }
+
+                a,
+                .menu-item {
+                    padding: 10px;
+                }
+
+                >ul {
+                    span[class^="icon"] {
+                        float: right;
+                        padding: 0px 10px;
+                        font-size: 10px;
+                    }
+                }
+
+
             }
 
-            .menu a {
-                padding: $menu_padding;
-            }
-
-            .menu>ul i {
-                float: right;
-                padding: $menu_icon_padding;
-                background: darken($menu_background, 15%);
-            }
-
-            .menu-dropdown a {
+            .menu-dropdown a,
+            .menu-dropdown .menu-item {
                 background: $moon-grey;
+                padding-#{$left}: calcRem(20);
+
             }
 
             .menu-hasflyout>ul a {
                 background: $primary;
                 padding-left: 30px;
                 color: $white;
-
             }
         }
     }
@@ -421,7 +429,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    height: 72px;
+    height: 60px;
     background-color: $moon-grey;
     animation: grow .2s ease-in-out; // optional animation
     z-index: -1;
@@ -432,6 +440,6 @@
 }
 
 #overlay-two {
-    top: 118px;
+    top: 135px;
     background-color: $primary;
 }
