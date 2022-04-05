@@ -45,7 +45,6 @@
    return gulp
      .src([
        'src/js/fancybox.umd.js',
-       'src/js/swiper-bundle.min.js',
        //  custom
        'src/js/navMenu.js',
        'src/js/swiper-custom.js',

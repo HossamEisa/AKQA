@@ -10,8 +10,7 @@
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -26,22 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right:before {
+  content: "\e905";
+}
+.icon-arrow-left:before {
+  content: "\e906";
+}
 .icon-hand-shield:before {
   content: "\e900";
 }
-
 .icon-hand-heart:before {
   content: "\e901";
 }
-
 .icon-play:before {
   content: "\e902";
 }
-
 .icon-arrow-up:before {
   content: "\e903";
 }
-
 .icon-arrow-down:before {
   content: "\e904";
 }
