@@ -11,6 +11,7 @@
    //concat files
    concat = require('gulp-concat'),
 
+   // Sass
    sass = require('gulp-sass')(require('sass'));
 
  const {
@@ -70,7 +71,7 @@
 
 
  //  Sass Compiler
- function compileSass() {
+ function sassCompiler() {
    return gulp.src('src/scss/**/*.scss')
      .pipe(sass().on('error', sass.logError))
      .pipe(gulp.dest('src/css'));
@@ -81,5 +82,5 @@
    require("./server.js");
    livereload.listen();
    gulp.watch(["./src/index.html", "./src/js/*.js", 'src/scss/**/*.scss'],
-     parallel(compileSass, minifiyhtml, minifyCSS, minifyJS, moveFonts, moveImages));
+     parallel(sassCompiler, minifiyhtml, minifyCSS, minifyJS, moveFonts, moveImages));
  }

@@ -339,6 +339,9 @@
                 }
 
                 &.menu-hasflyout {
+
+
+
                     &:hover {
 
                         >a,
@@ -347,7 +350,7 @@
 
                             &::before {
                                 border-bottom-color: $primary;
-                                bottom: -17px;
+                                bottom: -19px;
                             }
                         }
                     }
@@ -356,13 +359,13 @@
 
             // dropdown position and style
             .menu-hasdropdown>ul {
-                position: absolute;
+                position: absolute; 
                 top: 100%;
                 left: 0;
 
                 >li {
                     z-index: 1;
-                    padding: 13px 0;
+                    padding: 12px 0;
                     padding-right: 40px;
 
                     >a {
@@ -438,7 +441,7 @@
 
             @include mq('lg') {
                 border: none;
-                padding: 10px 0;
+                padding: 10px 0 !important;
 
             }
         }
