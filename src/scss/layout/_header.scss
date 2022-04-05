@@ -1,0 +1,437 @@
+.header {
+    position: relative;
+    z-index: 2;
+
+    .header-top {
+        padding: calcRem(29) 0;
+
+
+        @include mq('lg') {
+            margin-bottom: calcRem(60);
+            padding: calcRem(29) 0 0 0;
+
+        }
+
+        .logo {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+            padding: 0 15px;
+
+            @include mq('lg') {
+                padding: 0;
+            }
+        }
+
+        label {
+            padding: 0 15px;
+
+            @include mq('lg') {
+                padding: 0;
+            }
+        }
+
+        .searched {
+            display: none;
+            width: calcRem(354);
+            height: 51px;
+            background: url('../images/search-icon.svg') no-repeat 8px 6px;
+            background-size: 24px 24px;
+            background-position: 94%;
+            padding: 5px 20px 5px 25px;
+            border-style: solid;
+            border-color: $light-grey;
+            border-width: 1px;
+            border-radius: 50px;
+            color: $meduim-grey;
+            font-weight: bold;
+
+            &::placeholder {
+                text-transform: uppercase;
+            }
+
+            @include mq('lg') {
+                display: block;
+            }
+        }
+
+        #menu-toggler {
+            position: relative;
+            cursor: pointer;
+
+            .menu-bar {
+                width: 40px;
+                height: 5px;
+                background-color: $black;
+                display: block;
+                margin: 8px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                @include mq('lg') {
+                    display: none;
+                }
+            }
+
+            &.is-active {
+                .menu-bar {
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(1) {
+                        -webkit-transform: translateY(13px) rotate(45deg);
+                        -ms-transform: translateY(13px) rotate(45deg);
+                        -o-transform: translateY(13px) rotate(45deg);
+                        transform: translateY(13px) rotate(45deg);
+                    }
+
+                    &:nth-child(3) {
+                        -webkit-transform: translateY(-13px) rotate(-45deg);
+                        -ms-transform: translateY(-13px) rotate(-45deg);
+                        -o-transform: translateY(-13px) rotate(-45deg);
+                        transform: translateY(-13px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    // Header nav
+    .header-nav {
+        position: relative;
+        z-index: 1;
+        /* vars */
+        $menu_background: #035e8d;
+        $menu_color: #e2e2e2;
+        $menu_breakpoint: 992px;
+        $menu_toggle_background: black;
+        $menu_border: 1px solid rgba(255, 255, 255, 0.1);
+        $menu_padding: 15px 20px;
+        $menu_icon_padding: 5px 10px;
+
+        .container {
+            @media screen and (max-width: 992px) {
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        /* hide show mixin */
+
+
+        @mixin show () {
+            display: block;
+            animation: grow .5s ease-in-out; // optional animation
+
+            @include mq('lg') {
+                display: flex;
+            }
+        }
+
+        @mixin hide () {
+            display: none;
+        }
+
+        /* global  styles */
+
+        .menu {
+            position: relative;
+        }
+
+        .menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            --bold: 700;
+
+        }
+
+        .menu,
+        .menu a {
+            color: $black;
+            text-decoration: none;
+
+        }
+
+        .menu a {
+            display: block;
+            white-space: nowrap; // prevent links form going to a new line
+
+            @include mq('lg') {
+                position: relative;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 1.5rem;
+                color: black;
+                text-decoration: none;
+
+                &::after {
+                    content: attr(data-text);
+                    content: attr(data-text) / "";
+                    height: 0;
+                    visibility: hidden;
+                    overflow: hidden;
+                    user-select: none;
+                    pointer-events: none;
+                    font-weight: var(--bold);
+
+                    @media speech {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    font-weight: var(--bold)
+                }
+            }
+
+
+
+        }
+
+        .menu-dropdown,
+        .menu input[type="checkbox"] {
+            // hide defaults
+            @include hide;
+        }
+
+        .menu label:hover {
+            cursor: pointer;
+        }
+
+        /* narrow styles */
+
+        @media screen and (max-width: $menu_breakpoint) {
+
+            // hide navigation and right icons
+            .menu>ul,
+            .menu-righticon {
+                @include hide;
+            }
+
+            input[type="checkbox"]:checked+ul {
+                @include show;
+            }
+        }
+
+        /* large styles */
+
+        @media screen and (min-width: $menu_breakpoint) {
+
+            // hide show navigation button and checkboxes
+            .menu>label,
+            input[type="checkbox"] {
+                @include hide;
+            }
+
+            .menu a {
+                padding: $menu_padding;
+            }
+
+            // align items and style them
+            .menu>ul>li {
+                display: inline-block;
+            }
+
+            // hover logics
+            .menu-hasdropdown {
+
+                &:hover {
+                    >a {
+                        font-weight: var(--bold);
+
+                        &::before {
+                            bottom: 0;
+                            left: 50%;
+                            border: solid transparent;
+                            content: "";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(136, 183, 213, 0);
+                            border-bottom-color: $moon-grey;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+
+                        &::after {
+                            content: attr(data-text);
+                            content: attr(data-text) / "";
+                            height: 0;
+                            visibility: hidden;
+                            overflow: hidden;
+                            user-select: none;
+                            pointer-events: none;
+                            font-weight: var(--bold);
+                            animation: grow .5s ease-in-out; // optional animation
+
+                            @media speech {
+                                display: none;
+                            }
+                        }
+
+                    }
+
+                    >ul {
+                        @include show;
+                    }
+
+                }
+
+                &.menu-hasflyout {
+                    &:hover {
+                        >a {
+                            border-bottom: none;
+
+                            &::before {
+                                border-bottom-color: $primary;
+                                bottom: -26px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // dropdown position and style
+            .menu-hasdropdown>ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+
+                >li {
+                    z-index: 1;
+                    padding: 25px 19px;
+
+                    >a {
+                        color: $primary;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    padding-bottom: 5px;
+
+                    &:hover {
+                        border-bottom: 1px solid $white;
+                    }
+                }
+
+
+            }
+
+            // flyout position
+            .menu-hasflyout>ul {
+                #{$left}: 0;
+                top: 100%;
+
+                &::after {
+                    background: $primary;
+                }
+
+                a {
+                    color: $white !important;
+                }
+
+
+            }
+
+            .menu-hasflyout .menu-downicon {
+                @include hide;
+            }
+        }
+
+
+
+
+
+        /* look and feel only, not needed for core menu*/
+
+        // optional animation for display none/block
+        @keyframes grow {
+            0% {
+                display: none;
+                opacity: 0;
+            }
+
+            50% {
+                display: block;
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .menu-dropdown a {
+            padding: 0;
+            border-bottom: $menu_border;
+
+            @include mq('lg') {
+                border: none;
+            }
+        }
+
+        /* narrow  */
+        @media screen and (max-width: $menu_breakpoint) {
+            .menu>label {
+                background: $menu_toggle_background;
+                display: block;
+                padding: $menu_padding;
+                text-align: right;
+                color: #fff;
+            }
+
+            .menu a {
+                padding: $menu_padding;
+            }
+
+            .menu>ul i {
+                float: right;
+                padding: $menu_icon_padding;
+                background: darken($menu_background, 15%);
+            }
+
+            .menu-dropdown a {
+                background: $moon-grey;
+            }
+
+            .menu-hasflyout>ul a {
+                background: $primary;
+                padding-left: 30px;
+                color: $white;
+
+            }
+        }
+    }
+}
+
+#overlay-one,
+#overlay-two {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background-color: $moon-grey;
+    animation: grow .2s ease-in-out; // optional animation
+    z-index: -1;
+
+    &.active {
+        display: block;
+    }
+}
+
+#overlay-two {
+    top: 118px;
+    background-color: $primary;
+}

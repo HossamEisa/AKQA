@@ -1,0 +1,15 @@
+.dashed-list {
+    li {
+        position: relative;
+        margin-bottom: calcRem(15);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "—";
+            margin-#{$right}: 5px;
+        }
+    }
+}

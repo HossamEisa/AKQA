@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: primary-font;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: medium-font;
+  src: url("../fonts/OpenSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: light-font;
+  src: url("../fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: bold-font;
+  src: url("../fonts/OpenSans-Bold.ttf");
+}

@@ -1,0 +1,227 @@
+
+//////////////////
+// how-work
+//////////////////
+.how-work {
+    overflow: hidden;
+    background-color: $section-bk;
+    padding: calcRem(50) 0;
+
+    .row {
+        @include mq('xl') {
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+    }
+
+    .image {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include mq('lg') {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @include mq('xl') {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .content {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include mq('xl') {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .section-title {
+            margin-bottom: calcRem(30);
+            line-height: 1.5;
+        }
+
+        @include mq('lg') {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-top: calcRem(20);
+            text-align: $left;
+
+        }
+    }
+
+}
+
+//////////////////
+// tips-section
+//////////////////
+.tips-section {
+    overflow: hidden;
+    padding: calcRem(30) 0;
+
+    @include mq('lg') {
+        padding: calcRem(76) 0 calcRem(63);
+    }
+
+    .row {
+        @include mq('lg') {
+            margin-left: -40px;
+            margin-right: -40px;
+        }
+    }
+}
+
+//////////////////
+// neutralizes
+//////////////////
+.neutralizes {
+    overflow: hidden;
+    background-color: $section-bk;
+    padding: calcRem(35);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        background-color: rgb(0 0 0 / 30%);
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        @include mq('lg') {
+            display: none;
+        }
+    }
+
+    >.container {
+        position: relative;
+        z-index: 1;
+    }
+
+    @include mq('lg') {
+        background-image: none !important;
+    }
+
+    @include mq('xl') {
+        padding: calcRem(94) 0 calcRem(69);
+    }
+
+    .neturalizes-container {
+        display: flex;
+    }
+
+    .content-side {
+        color: $white;
+
+        .section-title {
+            color: $white;
+
+            @include mq('lg') {
+                color: $primary;
+            }
+        }
+
+        @include mq('lg') {
+            -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+            max-width: 35%;
+            color: $black;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: calcRem(30);
+        }
+
+
+        .dashed-list {
+            margin-bottom: calcRem(30);
+        }
+
+        .duration {
+            margin-top: calcRem(20);
+        }
+    }
+
+    .pic-side {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        padding: calcRem(60) 0 calcRem(60) calcRem(24);
+        flex-shrink: 1;
+        display: none;
+
+        @include mq('lg') {
+            display: block;
+        }
+
+        picture {
+            max-width: 100%;
+            height: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: $border-radius;
+        }
+
+    }
+
+
+}
+
+//////////////////
+// clinical-tools
+//////////////////
+.clinical-tools {
+    overflow: hidden;
+    padding: calcRem(25) 0;
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    @include mq('md') {
+        padding: calcRem(50) 0;
+    }
+
+    @include mq('xl') {
+        padding: calcRem(122) 0 calcRem(130);
+    }
+}
+
+//////////////////
+// kol-videos
+//////////////////
+
+.kol-videos {
+    background-color: $section-bk;
+    padding: calcRem(25) 0;
+    overflow: hidden;
+
+    @include mq('xl') {
+        padding: calcRem(96) 0 calcRem(80);
+    }
+}
