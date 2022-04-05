@@ -6,5 +6,5 @@ var server = new StaticServer({
 });
 
 server.start(function () {
-    console.log("http://localhost:1337/");
+    console.log("http://localhost:1337/"); 
 });

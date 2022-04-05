@@ -9,10 +9,9 @@
    //minify JS
    terser = require('gulp-terser'),
    //concat files
-   concat = require('gulp-concat');
+   concat = require('gulp-concat'),
 
-
- //  sass = require('gulp-sass');
+   sass = require('gulp-sass')(require('sass'));
 
  const {
    parallel
@@ -47,9 +46,9 @@
        'src/js/fancybox.umd.js',
        //  custom
        'src/js/navMenu.js',
-       'src/js/swiper-custom.js',
        'src/js/backTop.js',
        'src/js/scroll-animation.js',
+       'src/js/carousel-custom.js',
      ])
      .pipe(terser())
      .pipe(concat('all.js'))
@@ -70,8 +69,17 @@
  }
 
 
+ //  Sass Compiler
+ function compileSass() {
+   return gulp.src('src/scss/**/*.scss')
+     .pipe(sass().on('error', sass.logError))
+     .pipe(gulp.dest('./css'));
+ }
+
+
  exports.default = function () {
    require("./server.js");
    livereload.listen();
-   gulp.watch(["./src/index.html", "./src/js/*.js"], parallel(minifiyhtml, minifyCSS, minifyJS, moveFonts, moveImages));
+   gulp.watch(["./src/index.html", "./src/js/*.js", 'src/scss/**/*.scss'],
+     parallel(minifiyhtml, minifyCSS, minifyJS, moveFonts, moveImages, compileSass));
  }
