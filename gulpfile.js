@@ -73,7 +73,7 @@
  function compileSass() {
    return gulp.src('src/scss/**/*.scss')
      .pipe(sass().on('error', sass.logError))
-     .pipe(gulp.dest('./css'));
+     .pipe(gulp.dest('src/css'));
  }
 
 
@@ -81,5 +81,5 @@
    require("./server.js");
    livereload.listen();
    gulp.watch(["./src/index.html", "./src/js/*.js", 'src/scss/**/*.scss'],
-     parallel(minifiyhtml, minifyCSS, minifyJS, moveFonts, moveImages, compileSass));
+     parallel(compileSass, minifiyhtml, minifyCSS, minifyJS, moveFonts, moveImages));
  }

@@ -582,11 +582,14 @@ table {
 .header .header-nav input[type=checkbox] {
     display: none;
   }
-  .header .header-nav .menu a {
-    padding: 10px 15px 10px 0;
+  .header .header-nav .menu li a {
+    padding: 10px 23px;
   }
-  .header .header-nav .menu a .icon-arrow-down {
+  .header .header-nav .menu li a .icon-arrow-down {
     display: none;
+  }
+  .header .header-nav .menu li:first-child a {
+    padding-left: 0;
   }
   .header .header-nav .menu > ul > li {
     display: inline-block;
@@ -1290,6 +1293,7 @@ table {
   font-family: medium-font;
   font-weight: 300;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .hero-carousel .carousel {
   height: 350px;
@@ -1331,10 +1335,10 @@ table {
   opacity: 1;
   transform: translateY(0px);
 }
-.hero-carousel .carousel > ul .slide[data-active] > img {
+.hero-carousel .carousel > ul .slide[data-active] .hero-img {
   transform: scale(1);
 }
-.hero-carousel .carousel > ul .slide > img {
+.hero-carousel .carousel > ul .slide .hero-img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1358,10 +1362,13 @@ table {
   opacity: 0;
   z-index: 2;
   transform: translateY(50px);
+  line-height: 1.8;
+  font-family: medium-font;
 }
 @media only screen and (min-width: 992px) {
   .hero-carousel .carousel > ul .slide .content {
     left: 20%;
+    max-width: 450px;
   }
 }
 @media only screen and (min-width: 1200px) {

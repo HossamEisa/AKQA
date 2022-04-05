@@ -16,7 +16,7 @@
     <meta name="description" content="Test">
     <title>AKQA Test - HossamEissa</title>
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
-    <link href="all.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -45,9 +45,9 @@
                 <div class="container">
                     <nav class="menu">
                         <input type="checkbox" id="menu">
-                        <ul> 
-                            <li><a href="#">Bedingungen</a></li>   
-                            <li class="menu-hasdropdown levl-one-menu">  
+                        <ul>
+                            <li><a href="#">Bedingungen</a></li>
+                            <li class="menu-hasdropdown levl-one-menu">
                                 <a href="#">Behandlugen
                                 </a>
                                 <label class="label" title="toggle menu" for="Behandlugen">
@@ -73,13 +73,13 @@
                                 </ul>
                             </li>
                             <li><a href="#">Veranstaltungen</a></li>
-                            <li><a href="#">Werkzeuge</a></li> 
+                            <li><a href="#">Werkzeuge</a></li>
                             <li><a href="#">Forschung und Erkenntnisse</a></li>
 
                             <li>
                                 <input class="searched" type="text" name="Search" id="search-mob" placeholder="Search">
                             </li>
-                        </ul> 
+                        </ul>
                     </nav>
                 </div>
                 <div id="overlay-one"></div>
@@ -92,30 +92,33 @@
                 <div class="carousel" data-carousel>
                     <ul data-slides>
                         <li class="slide">
-                            <img src="./images/hero-section.png" alt="News Image One">
+                            <picture>
+                                <source media="(min-width:768px)" srcset="./images/hero-section.png">
+                                <img class="hero-img" src="./images/slide-one-mob.png " alt="News Image One">
+                            </picture>
                             <div class="content">
                                 <img alt="..." src="./images/hero-section-logo.svg" width="122" height="86">
-                                <p>Adtralza® is a new treatment for adult patients with moderate-to-severe
+                                <p tabindex="0">Adtralza® is a new treatment for adult patients with moderate-to-severe
                                     atopic
                                     dermatitis
                                     (eczema) who are candidates for systemic therapy.</p>
                             </div>
                         </li>
                         <li class="slide">
-                            <img src="./images/slider.jpg" alt="News Image two">
+                            <img class="hero-img" src="./images/slider.jpg" alt="News Image two">
                             <div class="content">
                                 <img alt="..." src="./images/hero-section-logo.svg" width="122" height="86">
-                                <p>Adtralza® is a new treatment for adult patients with moderate-to-severe
+                                <p tabindex="0">Adtralza® is a new treatment for adult patients with moderate-to-severe
                                     atopic
                                     dermatitis
                                     (eczema) who are candidates for systemic therapy.</p>
                             </div>
                         </li>
                         <li class="slide">
-                            <img src="./images/slider2.jpg" alt="News Image three">
+                            <img class="hero-img" src="./images/slider2.jpg" alt="News Image three">
                             <div class="content">
                                 <img alt="..." src="./images/hero-section-logo.svg" width="122" height="86">
-                                <p>Adtralza® is a new treatment for adult patients with moderate-to-severe
+                                <p tabindex="0">Adtralza® is a new treatment for adult patients with moderate-to-severe
                                     atopic
                                     dermatitis
                                     (eczema) who are candidates for systemic therapy.</p>
@@ -467,7 +470,7 @@
             <span class="icon-arrow-up"></span>
         </div>
     </div>
-    <script src="all.js"></script>
+    <script src="../build/all.js"></script>
 </body>
 
 </html>

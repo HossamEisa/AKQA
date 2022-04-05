@@ -265,11 +265,22 @@
                 @include hide;
             }
 
-            .menu a {
-                padding: 10px 15px 10px 0;
+            .menu {
+                li {
 
-                .icon-arrow-down {
-                    display: none;
+                    a {
+                        padding: 10px 23px;
+
+                        .icon-arrow-down {
+                            display: none;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            padding-left: 0;
+                        }
+                    }
                 }
             }
 
