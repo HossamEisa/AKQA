@@ -90,12 +90,12 @@
                     font-family: $medium-font;
 
                     @include mq('lg') {
-                        left: 20%;
+                        left: 7%;
                         max-width: 450px;
-
                     }
 
-                    @include mq('xl') {
+                    @include mq('xxl') {
+                        left: 20%;
                         top: 30px;
                     }
 

@@ -27,7 +27,7 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
-        if (elementInView(el, 1.25)) {
+        if (elementInView(el, 1)) {
             displayScrollElement(el);
         }
         //comment this else if you want animation run once

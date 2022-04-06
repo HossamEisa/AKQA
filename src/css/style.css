@@ -583,9 +583,9 @@ table {
     background: #fff;
     top: 0;
     bottom: 0;
-    width: 300px;
+    width: 280px;
     padding-top: 10px;
-    left: -320px;
+    left: -290px;
     transition: 0.5s ease-in-out;
     overflow: auto;
     box-shadow: 0 0 20px #939393;
@@ -1484,12 +1484,13 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media only screen and (min-width: 992px) {
   .hero-carousel .carousel > ul .slide .content {
-    left: 20%;
+    left: 7%;
     max-width: 450px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1600px) {
   .hero-carousel .carousel > ul .slide .content {
+    left: 20%;
     top: 30px;
   }
 }
