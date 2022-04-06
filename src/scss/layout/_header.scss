@@ -1,6 +1,11 @@
 .header {
     position: relative;
     z-index: 2;
+    overflow: hidden;
+
+    @include mq('lg') {
+        overflow: visible;
+    }
 
     .header-top {
         padding: 1rem 0;

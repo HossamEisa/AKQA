@@ -369,6 +369,12 @@ table {
 .header {
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .header {
+    overflow: visible;
+  }
 }
 .header .header-top {
   padding: 1rem 0;
