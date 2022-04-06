@@ -586,7 +586,7 @@ table {
     width: 300px;
     padding-top: 10px;
     left: -320px;
-    transition: 1s;
+    transition: 0.5s ease-in-out;
     overflow: auto;
     box-shadow: 0 0 20px #939393;
     z-index: 5;

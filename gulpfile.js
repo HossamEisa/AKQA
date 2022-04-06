@@ -37,7 +37,7 @@
        compatibility: 'ie8'
      }))
      .pipe(concat('all.css'))
-     .pipe(gulp.dest('build'))
+     .pipe(gulp.dest('build/css'))
      .pipe(livereload());
  }
  // Minify JS to Build
@@ -54,7 +54,7 @@
      ])
      .pipe(terser())
      .pipe(concat('all.js'))
-     .pipe(gulp.dest('build'))
+     .pipe(gulp.dest('build/js/'))
  }
 
  // Move Fonts to Build
