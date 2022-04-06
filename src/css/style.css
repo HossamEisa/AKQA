@@ -995,6 +995,14 @@ table {
     display: none;
   }
 }
+.wrapper.is-open #menu-overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
 .wrapper .header,
 .wrapper .footer {
   -webkit-box-flex: 0;

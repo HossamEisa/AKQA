@@ -44,20 +44,19 @@ burgerMenu.addEventListener("click", () => {
     // } else {
     //     navbarMenu.removeAttribute("style");
     // }
-
-
-
 });
 navbarMenu.addEventListener('click', (e) => {
     e.stopPropagation();
 });
 
-// wrapper.addEventListener('click', () => {
-//     if (wrapper.classList.contains('is-open')) {
-//         navbarMenu.classList.remove("is-active");
-//         burgerMenu.classList.remove("is-active");
-//         wrapper.classList.remove("is-open");
-//     } else {
-//         return false
-//     }
-// });
+document.getElementById('menu-overlay').addEventListener('click', () => {
+    setTimeout(function () {
+        if (wrapper.classList.contains('is-open')) {
+            navbarMenu.classList.remove("is-active");
+            burgerMenu.classList.remove("is-active");
+            wrapper.classList.remove("is-open");
+        } else {
+            return false
+        }
+    }, 100)
+});
