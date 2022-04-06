@@ -1,0 +1,144 @@
+<html>
+
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='../../assets/css/select2.min.css' media="all" rel='stylesheet' type='text/css'>
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="p-5">
+
+
+
+  <button class="DS btn btn-primary" type="button" data-toggle="modal" data-target="#cer-survuy-main">
+    التسجيل ف الشهادة رئيسي
+  </button>
+
+
+
+
+
+  <div class="modal fade" id="cer-survuy-main" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-head">
+          <h5>
+            من أجل إصدار الشهادة الرجاء تعبئة المعلومات التالية للسجل التجاري (رقم السجل) </h5>
+          <div class="mr-auto">
+            <div class="close-popup check-cr-cancel-button" data-dismiss="modal">
+              <span class="icon-close"></span>
+              
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+        <script>
+       
+        </script>
+        <form>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <div class="form-group">
+                <label for="depit" class="required">الإيرادات</label>
+                <input placeholder="برجاء ادخال قيمة الإيرادات السنوية (لا تتجاوز 200 مليون ريال سعودي)" type="text"
+                  class="form-control input-with-comma"  value="">
+
+                  <input placeholder="برجاء ادخال قيمة الإيرادات السنوية (لا تتجاوز 200 مليون ريال سعودي)" type="text"
+                  class="form-control input-with-comma"  value="">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="form-group">
+                <label for="credit " class="required">المصروفات</label>
+                <input placeholder="برجاء إدخال قيمة المصروفات السنوية (ريال سعودي)" type="text" class="form-control"
+                  id="credit " value="">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="form-group">
+                <label for="select" class="required">من فضلك إختر أحد الأسباب التالية لطلب إصدار الشهادة</label>
+                <select id="cer-multiselect-d" class="form-control select2 multi asdassadasdas" multiple>
+                  <option data-display="- اختر سبب -">لا شىء</option>
+                  <option value="...">خدمة جدير</option>
+                  <option value="...">خدمة جدير</option>
+                  <option value="..">منصة اعتماد</option>
+                  <option value="..">منصة اعتماد</option>
+                  <option value="..">منصة اعتماد</option>
+                  <option value="other">أخرى</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group" id="cer-others-reasons" style="display: none;">
+                <label for="">عنوان</label>
+                <textarea name="" cols="10" rows="3" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+
+          <div class="mt-4">
+            <h6 class="modal-monshaat-title">
+              <span class="icon-info"></span>
+              تعريف المنشآت
+            </h6>
+            <p class="black-color">
+              لمعرفة حجم منشأتك برجاء الضغط علي
+              <a href="">الرابط</a>
+            </p>
+          </div>
+          <!--  -->
+          <div class="mt-3">
+            <h6 class="modal-monshaat-title">
+              <span class="icon-info"></span>
+              تعهد وإقرار
+            </h6>
+            <p class="grey-color">
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+              اتعهد بصحة والخ تل وبعض المعلوما ت
+            </p>
+            <div class="mt-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input ml-2" id="customCheck1">
+                <label class="custom-control-label black-color" for="customCheck1">أوافق على صحة المعلومات والبيانات
+                  المقدمة</label>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-left mt-3">
+            <button class="DS btn btn-primary pr-5 pl-5">التالي</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="../../assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+
+  <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/jquery.nice-select.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/select2.full.min.js"></script>
+
+  <script src="../../assets/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>

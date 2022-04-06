@@ -1,0 +1,162 @@
+<html>
+
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../assets/css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <section class="content">
+    <div class="container">
+
+      <div class="col-12 col-md-11">
+
+        <div class="row">
+          <div class="col-12">
+            <!--  -->
+            <div class="edit-profile-page mt-3">
+
+              <div>
+                <form>
+                  <div class="row">
+                    <button type="button" data-toggle="modal" data-target="#check_for_cr"
+                      class="btn DS btn-primary  hvr-top">استعلام عن منشأة
+                    </button>
+
+
+
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div> <!-- .col-12 col-lg-8 -->
+
+
+    </div> <!-- .container -->
+
+
+  </section> <!-- .content -->
+  <!-- Modal -->
+
+
+
+  <div class="modal fade" id="check_for_cr" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content edit-form">
+        <div class="main-card">
+          <div class="cont">
+
+            <div class="d-flex bd-highlight modal-head px-1">
+              <h5>
+                استعلام عن منشأة
+              </h5>
+              <div class="mr-auto  bd-highlight ">
+                <div class="close-popup check-cr-cancel-button" data-dismiss="modal">
+                  <span class="icon-close"></span>
+                  إغلاق
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mx-auto pt-3">
+                <div class="check-cr-add-cr">
+                  <div class="form-group">
+                    <div class="row no-gutters">
+                      <div class="mb-3 cr-checkboxes">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                            class="custom-control-input" checked>
+                          <label class="custom-control-label" for="customRadioInline1">الاستعلام برقم السجل
+                            التجاري</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                            class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline2">الاستعلام برقم ملف وزارة
+                            العمل</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                            class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline3">الاستعلام بالرقم القومي</label>
+                        </div>
+                      </div>
+                    </div>
+                    <dev class="row">
+                      <div class="col-md-6">
+                        <input type="number" class="form-control" id="cr-number" placeholder="رقم السجل التجاري"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                          onKeyPress="if(this.value.length == 10) return false;">
+
+                      </div>
+                      <div id="cr-number-input" class=" col-md-4" style="display: none;">
+                          <input max="120" maxlength="3" min="1" type="number" class="form-control"
+                                 oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                 onKeyPress="if(this.value.length == 3) return false;"
+                                 placeholder="رقم الملف">
+                    </div>
+                    </dev>
+                    <!-- <label for="cr-number">رقم السجل التجاري</label> -->
+
+                  </div>
+
+                  <div class="text-left mt-4">
+                    <button class="btn DS btn-primary" id="submit-check-cr-number" type=button>استعلام
+                    </button>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <!-- .cont -->
+          <div class="w-100 gradient-bg bottom-bar">
+          </div>
+        </div>
+        <!-- .main-card -->
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../../assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+
+  <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/" type="text/javascript"></script>
+  <script src="../../assets/js/swiper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/jquery.nice-select.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/main.js" type="text/javascript"></script>
+  <script>
+    //////////////////////////////////////
+    // Check CR Check box is checked or not
+    //////////////////////////////////////
+    $(".cr-checkboxes input").on("change", function () {
+      if ($('#customRadioInline2').prop('checked') == true) {
+        //do something
+        $('#cr-number-input').slideDown();
+      } else {
+        $('#cr-number-input').slideUp();
+      }
+    });
+
+  </script>
+</body>
+
+</html>

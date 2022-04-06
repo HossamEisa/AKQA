@@ -3,6 +3,18 @@
     flex-direction: column;
     height: 100%;
 
+    &.is-open {
+        overflow: hidden;
+
+        @include mq('lg') {
+            overflow: visible;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     .header,
     .footer {
         -webkit-box-flex: 0;

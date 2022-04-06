@@ -1,0 +1,321 @@
+<html>
+
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../assets/css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="business-admin-dashboard">
+
+
+  <div class="wrapper">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="container">
+          <div class="row">
+            <div class="logo-and-button col-8 col-lg-1 order-0 d-flex align-items-center ">
+              <a href="/">
+                <img class="logo" src="/themes/mon_profile/assets/images/logo.svg" alt="logo">
+              </a>
+              <button class="navbar-toggler ml-3 ml-lg-5 mr-3" type="button" data-toggle="collapse"
+                data-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+
+            <!--  Main Menu-->
+            <div class="collapse navbar-collapse col-lg-7 order-2 order-lg-1 pl-lg-5 " id="navMenu">
+              <ul class="navbar-nav pt-4 pt-lg-0">
+
+              </ul>
+            </div>
+            <!--  -->
+            <div class="search-profile col-4 order-1 order-lg-2 d-flex justify-content-end align-items-center">
+              <ul class="d-flex align-items-center justify-content-end  left-menu-items" style="position:relative">
+
+
+                <li class="dropdown mr-4 profileMenu">
+                  <a class="nav-link d-flex" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="/themes/mon_profile/assets/images/Shape_user.svg" class="img-fluid" width="18">
+                  </a>
+                  <div class="dropdown-menu animated faster zoomIn dropdown-menu-left text-right"
+                    aria-labelledby="navbarDropdown">
+                    <!-- <a class="dropdown-item"
+                   href="/user/main-profile">الخدمات الشخصية</a>
+                <div class="dropdown-divider"></div> -->
+                    <a class="dropdown-item" href="/user/logout">تسجيل الخروج</a>
+                  </div>
+                </li>
+                <li class="d-inline-block oneIcon mr-4">
+                  <a href="javascript:void(0)" class="hvr-pulse" id="show-menu">
+                    <span class="icon-menu"></span>
+
+                  </a>
+                </li>
+                <div id="monshaat-one-icon" data-width="300px" data-height="300px"
+                  class="scroll-bar mCustomScrollbar _mCS_1 mCS-dir-rtl mCS_no_scrollbar" data-lang="ar"
+                  style="display: none; position: absolute;">
+                  <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                    style="max-height: 263px;" tabindex="0">
+                    <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                      style="position:relative; top:0; left:0;" dir="rtl"></div>
+                    <div id="mCSB_1_scrollbar_vertical"
+                      class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical"
+                      style="display: none;"><a href="#" class="mCSB_buttonUp"></a>
+                      <div class="mCSB_draggerContainer">
+                        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                          style="position: absolute; min-height: 30px; top: 0px;">
+                          <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                      </div><a href="#" class="mCSB_buttonDown"></a>
+                    </div>
+                  </div>
+                  <p>unauthorized OI client uri or api key</p>
+                </div>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </nav>
+    </header>
+    <div class="business-sidebar">
+      <div class="list">
+        <ul>
+          <li class="active">
+            <a href="">
+              <span class="icon-home"></span>
+              <span class="text">قائمة ١</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="icon-user"></span>
+              <span class="text">قائمة 2</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span class="icon-building-single"></span>
+              <span class="text">قائمة 3</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar-control">
+        <span class="icon-left-arrow"></span>
+      </div>
+    </div>
+    <div>
+
+      <section class="content">
+        <div class="container-fluid">
+          <div class="business-tabs">
+            <h2 class="business-title">الإستعلام عن تفاصيل المنشأت</h2>
+            <ul class="nav oup-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="false">تفاصيل المنشأة</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                  aria-controls="profile" aria-selected="false">ملاك المنشأة</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">شهادة حجم المنشأة</a>
+              </li>
+              <li class="nav-item selected" role="presentation">
+                <a class="nav-link active" id="update-cr-tab" data-toggle="tab" href="#update-cr" role="tab"
+                  aria-controls="update-cr" aria-selected="true">تحديث المنشآت</a>
+              </li>
+            </ul>
+            <div class="tab-content oup-tabs-content bottom-border-g" id="myTabContent">
+              <div class="tab-pane fadeInUp" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="fadeInUp animated">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="cr-number">استعلام برقم الهوية</label>
+                        <input type="number" class="form-control" id="cr-number" placeholder="أدخل رقم الهوية"
+                          oninput="this.value = this.value.replace(/[^0-9+]/g, '')" maxlength="15"
+                          onkeypress="if(this.value.length==15) return false;">
+                      </div>
+                      <div class="text-left">
+                        <button class="DS btn btn-primary pr-5 pl-5">استعلام</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab 2 -->
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="fadeInUp animated">
+                  <!-- Start Sub Tabs -->
+                  <ul class="nav mb-2 sub-circle-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#cr-num-tab" role="tab" aria-controls="home"
+                        aria-selected="true">
+                        <span class="checkbox-item"></span>
+                        استعلام برقم السجل التجاري</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#id-num-tab" role="tab" aria-controls="profile"
+                        aria-selected="false">
+                        <span class="checkbox-item"></span>
+                        استعلام برقم الهوية
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="cr-num-tab" role="tabpanel" aria-labelledby="cr-num-tab">
+                      <div class="row fadeInUp animated">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label for="cr-number">رقم السجل التجاري</label>
+                            <input type="number" class="form-control" id="cr-number" value="35"
+                              oninput="this.value = this.value.replace(/[^0-9+]/g, '')" maxlength="15"
+                              onkeypress="if(this.value.length==15) return false;">
+                          </div>
+                          <div class="text-left">
+                            <button class="DS btn btn-primary pr-5 pl-5">استعلام</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="id-num-tab" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="row fadeInUp animated">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label for="cr-number">رقم الهوية</label>
+                            <input type="number" class="form-control" id="cr-number" value="35"
+                              oninput="this.value = this.value.replace(/[^0-9+]/g, '')" maxlength="15"
+                              onkeypress="if(this.value.length==15) return false;">
+                          </div>
+                          <div class="text-left">
+                            <button class="DS btn btn-primary pr-5 pl-5">استعلام</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Sub Tabs -->
+
+                </div>
+              </div>
+              <!-- Tab3 -->
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="fadeInUp animated">
+                  <div class="row fadeInUp animated">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="cr-number">رقم السجل التجاري</label>
+                        <input type="number" class="form-control" id="cr-number" value="35"
+                          oninput="this.value = this.value.replace(/[^0-9+]/g, '')" maxlength="15"
+                          onkeypress="if(this.value.length==15) return false;">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="cr-number">رقم الهوية</label>
+                        <input type="number" class="form-control" id="cr-number" value="35"
+                          oninput="this.value = this.value.replace(/[^0-9+]/g, '')" maxlength="15"
+                          onkeypress="if(this.value.length==15) return false;">
+                      </div>
+                    </div>
+                    <div class="col-sm-8 text-left">
+                      <button class="DS btn btn-primary pr-5 pl-5">استعلام</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab4 -->
+              <div class="tab-pane fade show active" id="update-cr" role="tabpanel" aria-labelledby="update-cr-tab">
+                <div class="fadeInUp animated">
+                  <div class="row fadeInUp animated">
+                    <div class="col-sm-4">
+                      <div>
+                        <div class="form-group">
+                          <label for="cr-number">رقم الهوية</label>
+                          <input placeholder="ادخل رقم الهوية" type="number" class="form-control" id="cr-number"
+                            oninput="this.value = this.value.replace(/[^0-9+]/g, '')" maxlength="15"
+                            onkeypress="if(this.value.length==15) return false;">
+                        </div>
+                      </div>
+
+                      <div class="text-left">
+                        <button class="DS btn btn-outline-primary pr-5 pl-5">استعلام</button>
+                        <button class="DS btn btn-primary pr-5 pl-5"  data-toggle="modal"
+                        data-target="#business-admin-update-cr-modal">تحديث</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- A -->
+          <div class="b-cr-details mt-5">
+            <h2 class="sub-business-title">قائمة منشآت المستخدم</h2>
+            <div class="section-list mb-3">
+              <h6 class="black-color">368978974564678</h6>
+            </div>
+            <div class="section-list mb-3">
+              <h6 class="black-color">368978974564678</h6>
+            </div>
+            <div class="section-list mb-3">
+              <h6 class="black-color">368978974564678</h6>
+            </div>
+          </div>
+        </div> <!-- .container -->
+      </section> <!-- .content -->
+    </div>
+  </div>
+  <div class="modal fade min-modal " id="business-admin-update-cr-modal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-head">
+        <div class="mr-auto">
+          <div class="close-popup check-cr-cancel-button" data-dismiss="modal">
+            <span class="icon-close"></span>
+            
+          </div>
+
+        </div>
+
+      </div>
+      <!-- content -->
+      <div class="mb-4 mt-3">
+        <div class="text-center mb-3">
+          <span class="icon-valid-mark h2"><span class="path1"></span><span class="path2"></span></span> </span>
+        </div>
+        <h6 class="modal-warning-messge">تم تحديث قائمة المنشآت بنجاح.</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <script src="../../assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/jquery.nice-select.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/wow.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>

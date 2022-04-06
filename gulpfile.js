@@ -50,6 +50,7 @@
        'src/js/backTop.js',
        'src/js/scroll-animation.js',
        'src/js/carousel-custom.js',
+       'src/js/loading.js',
      ])
      .pipe(terser())
      .pipe(concat('all.js'))

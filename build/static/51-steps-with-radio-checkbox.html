@@ -1,0 +1,681 @@
+<html>
+
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../assets/css/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container">
+        <div class="row">
+          <div class="logo-and-button col-8 col-lg-1 order-0 d-flex align-items-center">
+            <a href="/">
+              <img class="logo" src="../../assets/images/logo.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler ml-3 ml-lg-5 mr-3" type="button" data-toggle="collapse" data-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!--  Main Menu-->
+          <div class="collapse navbar-collapse col-lg-7 order-2 order-lg-1 pl-lg-5 " id="navMenu">
+            <ul class="navbar-nav pt-4 pt-lg-0">
+              <li id="personal-services" class="nav-item active">
+                <a class="nav-link" href="/user/main-profile">الخدمات الشخصية</a>
+              </li>
+              <li id="contact-us" class="nav-item">
+                <a class="nav-link" href="/contact-us" target="_blank">تواصل معنا </a>
+              </li>
+              <li id="monshaat-link" class="nav-item">
+                <a class="nav-link" href="/monshaat" target="_blank">منشآت</a>
+              </li>
+            </ul>
+          </div>
+          <!--  -->
+          <div class="search-profile col-4 order-1 order-lg-2 d-flex justify-content-end align-items-center">
+            <ul class="d-flex align-items-center justify-content-end  left-menu-items" style="position:relative">
+              <!-- notification-center -->
+              <li id="notifidropdownmenu" class="notification-center-menu dropdown mr-4">
+                <a class="nav-link d-flex" href="#" id="notifiDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <div class="notification">
+                    <svg viewbox="0 0 166 197">
+                      <path
+                        d="M82.8652955,196.898522 C97.8853137,196.898522 110.154225,184.733014 110.154225,169.792619 L55.4909279,169.792619 C55.4909279,184.733014 67.8452774,196.898522 82.8652955,196.898522 L82.8652955,196.898522 Z"
+                        class="notification-bellClapper"></path>
+                      <path
+                        d="M146.189736,135.093562 L146.189736,82.040478 C146.189736,52.1121695 125.723173,27.9861651 97.4598237,21.2550099 L97.4598237,14.4635396 C97.4598237,6.74321823 90.6498186,0 82.8530327,0 C75.0440643,0 68.2462416,6.74321823 68.2462416,14.4635396 L68.2462416,21.2550099 C39.9707102,27.9861651 19.5163297,52.1121695 19.5163297,82.040478 L19.5163297,135.093562 L0,154.418491 L0,164.080956 L165.706065,164.080956 L165.706065,154.418491 L146.189736,135.093562 Z"
+                        class="notification-bell"></path>
+                    </svg>
+                    <span class="notification-num">5</span>
+                  </div>
+                </a>
+                <div class="dropdown-menu animated faster zoomIn dropdown-menu-left text-right"
+                  aria-labelledby="notifiDropdown">
+                  <div class="notifi-menu-content">
+                    <h3 class="title">الإشعارات</h3>
+                    <div class="">
+                      <ul class="notfi-menu-list">
+                        <li class="notifi-menu-item">
+                          <a href="">
+                            <div class="row no-gutters">
+                              <div class="notifi-item-circle">
+                                <span class="icon-bell"></span>
+                              </div>
+                              <div class="text">
+                                <p>لقد تم تحديث الشروط والأحكام الخاصة بموقع منشآت</p>
+                                <span class="date">
+                                  <span class="icon-calendar2"></span>
+                                  <span>26 يناير 2020 </span>
+                                  -
+                                  <span>10:00م</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="notifi-menu-item">
+                          <a href="">
+                            <div class="row no-gutters">
+                              <div class="notifi-item-circle">
+                                <span class="icon-bell"></span>
+                              </div>
+                              <div class="text">
+                                <p>لقد تم تحديث الشروط والأحكام الخاصة بموقع منشآت</p>
+                                <span class="date">
+                                  <span class="icon-calendar2"></span>
+                                  <span>26 يناير 2020 </span>
+                                  -
+                                  <span>10:00م</span>
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="load-all-notifi">
+                      <h4>
+                        <a href="">عرض جميع الإشعارات</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- User Menu -->
+              <li class="dropdown mr-4 profileMenu">
+                <a class="nav-link d-flex" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <span class="icon-np_user"></span> </a>
+                <div class="dropdown-menu animated faster zoomIn dropdown-menu-left text-right"
+                  aria-labelledby="navbarDropdown">
+                  <!-- <a class="dropdown-item"
+                   href="/user/main-profile">الخدمات الشخصية</a>
+                <div class="dropdown-divider"></div> -->
+                  <a class="dropdown-item" href="/user/logout">تسجيل الخروج</a>
+                </div>
+              </li>
+              <li class="d-inline-block oneIcon mr-4">
+                <a href="javascript:void(0)" class="hvr-pulse" id="show-menu">
+                  <span class="icon-menu"></span>
+                </a>
+              </li>
+              <div id="monshaat-one-icon" data-width="300px" data-height="300px"
+                class="scroll-bar mCustomScrollbar _mCS_1 mCS-dir-rtl mCS_no_scrollbar" data-lang="ar"
+                style="display: none; position: absolute;">
+                <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 263px;"
+                  tabindex="0">
+                  <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                    style="position:relative; top:0; left:0;" dir="rtl"></div>
+                  <div id="mCSB_1_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: none;"><a href="#" class="mCSB_buttonUp"></a>
+                    <div class="mCSB_draggerContainer">
+                      <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                      </div>
+                      <div class="mCSB_draggerRail"></div>
+                    </div><a href="#" class="mCSB_buttonDown"></a>
+                  </div>
+                </div>
+                <p>unauthorized OI client uri or api key</p>
+              </div>
+
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+  <section class="content">
+    <div class="container">
+      <div class="profile">
+        <div class="row">
+          <div class="col-12 col-lg-1">
+            <nav class="navtabs card">
+              <a href="/user/main-profile" class="btn" data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="الملف الشخصي">
+                <i class="icon icon-dashboard"></i>
+              </a>
+
+              <a href="/service/ssc" class="btn " data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="خدمات الاستشارات">
+                <i class="icon icon-ssc"></i>
+              </a>
+              <a href="/service/emtiyaz" class="btn " data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="الامتياز التجاري">
+                <i class="icon icon-franchisor"></i>
+              </a>
+              <a href="/service/training" class="btn " data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="التدريب">
+                <i class="icon icon-training"></i>
+              </a>
+              <a href="/service/ep" class="btn " data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="رخص حاضنات الأعمال">
+                <i class="icon icon-ep"></i>
+              </a>
+              <a href="/service/ep" class="btn active" data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="مزايا">
+                <i class="icon icon-mazaya">
+                  <span class="path1"></span>
+                </i>
+              </a>
+              <a href="/service/ep" class="btn " data-toggle="tooltip" data-placement="left" title=""
+                data-original-title="رخص حاضنات الأعمال">
+                <i class="icon icon-ep"></i>
+              </a>
+            </nav> <!-- .navtabs -->
+          </div>
+          <!-- Side Bar End -->
+          <div class="col-12 col-lg-11">
+            <div class="media-bar mb-5">
+              <div class="row no-gutters align-items-center">
+                <div class="mx-auto mb-4 ml-md-5 mb-md-0">
+                  <img src="../../assets/images/Growth-bar.png" alt="...">
+                </div>
+                <div class="col-md text-center text-md-right">
+                  <h5 class="title">نموذج التقديم لخدمة الاستشارات التسويق والعلامة التجارية</h5>
+                  <p> يرجى ملئ البيانات التالية لكي نسطيع تقديم خدمات أفضل لك</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="section">
+              <div class="growth-wizard">
+                <nav>
+                  <div class="nav nav-tabs" id="growth-tab" role="tablist">
+                    <a class="nav-link active" id="nav-details-tab" data-toggle="tab" href="#nav-details" role="tab"
+                      aria-controls="nav-home" aria-selected="true">
+                      <div class="circle">
+                        <span class="icon-np_user"></span>
+                      </div>
+                      <p>تفاصيل مقدم الطلب</p>
+
+                    </a>
+                    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-com-details" role="tab"
+                      aria-controls="nav-com-details" aria-selected="false">
+                      <div class="circle">
+                        <span class="icon-build-with-tree"></span>
+                      </div>
+                      <p>تفاصيل المنشأة</p>
+                    </a>
+                    <a class="nav-link" id="nav-attachments-tab" data-toggle="tab" href="#nav-attachments" role="tab"
+                      aria-controls="nav-attachments" aria-selected="false">
+                      <div class="circle">
+                        <span class="icon-paper-with-cer"></span>
+                      </div>
+                      <p>المرفقات</p>
+                    </a>
+                  </div>
+                </nav>
+                <!-- <div class="tab-content d-none" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-details" role="tabpanel"
+                    aria-labelledby="nav-details-tab">
+                    <form id="demo-form">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <div class="ajax-error-message text-align-right alert alert-warning d-none">هذا الحقل مطلوب
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="required" for="select-idea">اختيار الخدمة</label>
+                        <select class="form-control  mt-2" id="select-idea" required>
+                          <option data-display=" نموذج التقديم لخدمة الاستشارات التسويق والعلامة التجارية">لا شىء
+                          </option>
+                          <option> التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت
+                            التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية
+                            لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار
+                            رات الت التالية لطلب إصدار رات الت</option>
+                          <option>
+                            123123123132123113212312312312 1231231321 23123123123123123123123123
+                          </option>
+                          <option>2</option>
+                        </select>
+                        <div class="ajax-error-message text-align-right alert alert-warning d-none">هذا الحقل مطلوب
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="required" for="">الاسم الثلاثي (عربي)</label>
+                        <input type="text" class="form-control" value="محمد خالد الصالح" readonly>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="required" for="">المنصب</label>
+                        <input type="text" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="required" for="">البريد الالكتروني</label>
+                        <input type="email" class="form-control" value="name@example.com" disabled>
+                      </div>
+
+                      <div class="text-left">
+                        <button class="DS btn btn-primary next">التالي</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane fade" id="nav-com-details" role="tabpanel" aria-labelledby="nav-com-details-tab">
+                    5646456
+                  </div>
+                  <div class="tab-pane fade" id="nav-attachments" role="tabpanel" aria-labelledby="nav-attachments-tab">
+                    3</div>
+                </div> -->
+
+                <form id="growth-wizard-form">
+                  <div class="form-section">
+                    <div class="form-group">
+                      <label class="required" for="select-idea">اختيار الخدمة</label>
+                      <select class="form-control  mt-2" id="select-idea" required
+                        data-parsley-errors-container="#choose-msg">
+                        <option data-display=" نموذج التقديم لخدمة الاستشارات التسويق والعلامة التجارية"></option>
+                        <option> التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت
+                          التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية
+                          لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار رات الت التالية لطلب إصدار
+                          رات الت التالية لطلب إصدار رات الت</option>
+                        <option>
+                          123123123132123113212312312312 1231231321 23123123123123123123123123
+                        </option>
+                        <option>2</option>
+                      </select>
+                      <div id="choose-msg"></div>
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                      <label class="required" for="">الاسم الثلاثي (عربي)</label>
+                      <input type="text" class="form-control" value="محمد خالد الصالح" readonly>
+                    </div>
+                    <div class="form-group">
+                      <p class="grey-color">اختار سبب:</p>
+                      <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                      </div>
+                      <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label" for="customCheck12">Check this custom checkbox</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="required" for="">المنصب</label>
+                      <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="required" for="">البريد الالكتروني</label>
+                      <input type="email" class="form-control" value="name@example.com" disabled>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="form-section">
+                    <div class="form-group">
+                      <label class="required" for="select-idea">اسم الشركة</label>
+                      <select class="form-control  mt-2" disabled>
+                        <option data-display="شركة خالد للتقنية الحديثة">لا شىء
+                        </option>
+                        <option>a</option>
+                        <option>b</option>
+                      </select>
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                      <label class="required" for="name">رقم السجل التجاري</label>
+                      <input type="number" class="form-control" placeholder="Name" readonly value="1093845759">
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                      <label class="required">قطاع الشركة</label>
+                      <select class="form-control  mt-2" required data-parsley-errors-container=".error-msg">
+                        <option data-display="اختيار القطاع"></option>
+                        <option>a</option>
+                        <option>b</option>
+                      </select>
+                      <div class="error-msg"></div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for=""><span class="required">العنوان</span>
+                        <span class="icon-question-mark" data-toggle="tooltip" data-placement="bottom"
+                          title="عنوان الشركة"></span>
+                      </label>
+                      <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="required">المنطقة</label>
+                      <select class="form-control  mt-2" required data-parsley-errors-container="#select-town">
+                        <option data-display="اختيار المنطقة"></option>
+                        <option>a</option>
+                        <option>b</option>
+                      </select>
+                      <div id="select-town"></div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="required">المدينة</label>
+                      <select class="form-control  mt-2" required data-parsley-errors-container="#select-city">
+                        <option data-display="اختيار المدينة"></option>
+                        <option>a</option>
+                        <option>b</option>
+                      </select>
+                      <div id="select-city"></div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="" class="required">نبذة عن مجال الشركة</label>
+                      <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="" class="required">مجموع إيرادات لعام 2017</label>
+                      <input class="form-control" type="text" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="" class="required">مجموع إيرادات لعام 2018</label>
+                      <input class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="required">مجموع إيرادات لعام 2018</label>
+                      <input class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="required">مجموع إيرادات لعام 2018</label>
+                      <input class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="required">مجموع إيرادات لعام 2018</label>
+                      <input class="form-control" type="text" required>
+                    </div>
+
+                  </div>
+                  <!--   3  -->
+                  <div class="form-section">
+                    <div class="form-group">
+                      <label class="required" for="">البريد الالكتروني</label>
+                      <input type="email" class="form-control" value="name@example.com" disabled>
+                    </div>
+                  </div>
+
+                  <div class="form-navigation text-left">
+                    <button type="button" class="previous DS btn btn-outline-primary ml-2">السابق</button>
+                    <button type="button" class="next DS btn btn-primary">التالي</button>
+                    <button type="submit" class="DS btn btn-primary">إرسال</button>
+                    <span class="clearfix"></span>
+                  </div>
+
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- .container -->
+  </section> <!-- .content -->
+
+
+  <button id="tour-certificate" class="btn DS btn-outline-primary btn-cert mt-2" type="button"
+  data-toggle="modal" data-target="#growth-successful">رسالة الشكر</button>
+
+
+  <footer class="mini-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xl-3">
+          <div class="footer-logo d-flex align-items-end  justify-content-center justify-content-lg-start">
+            <div class="logo ml-3">
+              <img src="/themes/mon_profile/assets/images/logo.svg" alt="Footer Logo">
+            </div> <!-- .logo -->
+
+            <div>
+              <div id="block-copyrightblock" class="contextual-region">
+
+                <div data-contextual-id="block:block=copyrightblock:langcode=ar"
+                  data-contextual-token="dIw1qKma-y0q4w5m46vN1Ko8Y8giYg5VSLajTYnn4wU" class="contextual" role="form">
+                  <button class="trigger visually-hidden focusable" type="button" aria-pressed="false">مفتوح
+                    configuration options</button>
+                  <ul class="contextual-links" hidden="">
+                    <li class="block-configure"><a
+                        href="/admin/structure/block/manage/copyrightblock?destination=/user/edit-profile">ضبط
+                        الصندوق</a></li>
+                    <li class="config-translationcontextual-linksentityblockconfig-translation-overview"><a
+                        href="/admin/structure/block/manage/copyrightblock/translate?destination=/user/edit-profile">Translate
+                        block</a></li>
+                  </ul>
+                </div>
+                <div class="txt">
+                  <span>إحدى مبادرات منشآت</span>
+                  <span>جميع الحقوق محفوظة © 2020 © 2020 </span>
+                </div> <!-- .txt -->
+
+              </div>
+
+            </div>
+
+          </div> <!-- .footer-logo -->
+        </div> <!-- .col col-12 col-lg-3 -->
+
+        <div class="col-lg-4 col-xl-6 d-flex flex-wrap justify-content-center mt-4 mt-lg-0">
+          <div class="footer-menu">
+            <ul class="d-flex flex-wrap justify-content-center ">
+
+
+
+
+
+              <li class="quick-links__list__item" title="سياسة الإستخدام">
+                <a href="http://portal-dev.monshaat.sa/ar/terms">سياسة الإستخدام</a>
+              </li>
+
+              <li class="quick-links__list__item" title="عن منشأت">
+                <a href="http://portal-dev.monshaat.sa/ar/about">عن منشأت</a>
+              </li>
+
+              <li class="quick-links__list__item" title="خدمات منشأت">
+                <a href="https://portal-dev.monshaat.sa/ar/serviceslist">خدمات منشأت</a>
+              </li>
+
+              <li class="quick-links__list__item" title="تواصل معنا">
+                <a href="https://www.monshaat.gov.sa/ar/content/%D8%A7%D8%AA%D8%B5%D9%84-%D8%A8%D9%86%D8%A7">تواصل
+                  معنا</a>
+              </li>
+
+
+
+
+
+
+
+            </ul>
+          </div> <!-- .footer-menu -->
+        </div> <!-- .col col-12 col-lg-3 -->
+
+        <div class="col-lg-4 col-xl-3 d-flex flex-wrap justify-content-center justify-content-lg-end  mt-4 mt-lg-0">
+          <div class="social">
+            <h2 class="text-center text-lg-right">تابعنا عبر</h2>
+
+            <div>
+              <div id="block-socialblock" class="contextual-region">
+
+                <div data-contextual-id="block:block=socialblock:langcode=ar"
+                  data-contextual-token="U7thV08n0dCxzp-jldm7rM_UOXyX0oyHir-hGAyJLmM" class="contextual" role="form">
+                  <button class="trigger visually-hidden focusable" type="button" aria-pressed="false">مفتوح
+                    configuration options</button>
+                  <ul class="contextual-links" hidden="">
+                    <li class="block-configure"><a
+                        href="/admin/structure/block/manage/socialblock?destination=/user/edit-profile">ضبط الصندوق</a>
+                    </li>
+                    <li class="config-translationcontextual-linksentityblockconfig-translation-overview"><a
+                        href="/admin/structure/block/manage/socialblock/translate?destination=/user/edit-profile">Translate
+                        block</a></li>
+                  </ul>
+                </div>
+                <ul>
+                  <li>
+                    <a href="https://twitter.com/MonshaatSA?s=1" title="twitter" target="_blank">
+                      <i class="icon-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/MonshaatSA/" title="facebook" target="_blank">
+                      <i class="icon-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/monshaatsa/" title="instagram" target="_blank">
+                      <i class="icon-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/channel/UCajQIzMWeWK9bRQv5Ue3oUQ" title="youtube" target="_blank">
+                      <i class="icon-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/monshaatsa/" title="linkedin" target="_blank">
+                      <i class="icon-linkedin"></i>
+                    </a>
+                  </li>
+                </ul> <!-- .social -->
+
+              </div>
+
+            </div>
+
+            <!-- .social -->
+          </div> <!-- .social -->
+        </div> <!-- .col col-12 col-lg-3 -->
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </footer>
+
+  <div class="modal fade min-modal" id="growth-warning-message" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content edit-form">
+        <div class="d-flex bd-highlight modal-head px-1">
+          <h5>تقييم خدمة شهادة حجم المنشأة</h5>
+          <div class="mr-auto  bd-highlight ">
+            <div class="close-popup" data-dismiss="modal">
+              <span class="icon-close"></span>
+              
+            </div>
+          </div>
+        </div>
+        <!-- Alert Message -->
+        <div class="rating-modal-warning text-center">
+          <img src="../../assets/images/alert-img.png">
+          <h6 class="black-color azer-m mt-5">إذا أغلقت النافذة ، فستتم إزالة جميع الإجابات, هل أنت متأكد من أنك تريد إغلاق النافذة؟</h6>
+
+          <div class="text-left mt-5">
+            <button class="btn DS btn-primary" id="end-questions" data-dismiss="modal" type="button">انهاء
+            </button>
+          </div>
+        </div>
+        <!-- .main-card -->
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade min-modal" id="growth-successful" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-head d-flex bd-highlight px-1">
+        <h5>نموذج التقديم الأولي لخدمة الاستشارات التسويق والعلامة التجارية</h5>
+        <div class="mr-auto  bd-highlight ">
+          <div class="close-popup" data-dismiss="modal">
+            <span class="icon-close"></span>
+            
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="mb-4 mt-3">
+        <div class="text-center mb-3">
+          <span class="icon-valid-mark" style="font-size: 65px;"><span class="path1"></span><span
+              class="path2"></span></span> </span>
+        </div>
+        <div class="text-center">
+          <h3 class="azer-m mt-4 mb-2 brand-color">شكرا لك</h3>
+          <p class="black-color">تم إرسال طلبك وسيتم الرد عليكم بخصوص ترشيحكم للخدمة</p>
+        </div>
+        <div class="text-center mt-5">
+          <a href="" class="DS btn btn-outline-primary ml-3">طلبات منظومة النمو</a>
+          <a href="" class="DS btn btn-primary">الملف الشخصي</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <script src="../../assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/jquery.nice-select.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/swiper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/wow.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/jquery.mixitup.js" type="text/javascript"></script>
+  <script src="../../assets/js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/bootstrap-rating-input.min.js"></script>
+  <script src="../../assets/js/ellipsis.js" type="text/javascript"></script>
+  <script src="../../assets/js/parsley/parsley.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/main.js" type="text/javascript"></script>
+
+</body>
+
+</html>

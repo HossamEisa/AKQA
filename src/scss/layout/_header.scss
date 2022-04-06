@@ -244,20 +244,53 @@
         @media screen and (max-width: 992px) {
 
             // hide navigation and right icons
-            .menu>ul,
+            .menu>ul li>ul,
             .menu-righticon {
                 @include hide;
             }
 
-            input[type="checkbox"]:checked+ul {
+            .menu>ul li input[type="checkbox"]:checked+ul {
                 @include show;
+            }
 
+            .mobile-menu-ul {
+                position: fixed;
+                background: #fff;
+                top: 0;
+                bottom: 0;
+                width: 300px;
+                padding-top: 10px;
+                left: -320px;
+                transition: 1s;
+                overflow: auto;
+                box-shadow: 0 0 20px #939393;
+                z-index: 5;
+
+                @include mq('sm') {
+                    width: 350px;
+                    left: -360px;
+                }
+
+
+                >ul {
+                    padding-top: 20px;
+                }
+
+                &.is-active {
+                    left: 0;
+                }
             }
         }
 
         /* large styles */
 
         @media screen and (min-width: 992px) {
+
+            .mobile-menu-ul {
+                .logo {
+                    display: none
+                }
+            }
 
             // hide show navigation button and checkboxes
             .menu>label,
@@ -359,7 +392,7 @@
 
             // dropdown position and style
             .menu-hasdropdown>ul {
-                position: absolute; 
+                position: absolute;
                 top: 100%;
                 left: 0;
 
@@ -493,6 +526,7 @@
 #overlay-one,
 #overlay-two {
     display: none;
+    visibility: hidden;
     position: absolute;
     left: 0;
     right: 0;
@@ -500,6 +534,10 @@
     background-color: $moon-grey;
     animation: grow .2s ease-in-out; // optional animation
     z-index: -1;
+
+    @include mq('lg') {
+        visibility: visible;
+    }
 
     &.active {
         display: block;

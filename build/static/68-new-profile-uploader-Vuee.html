@@ -1,0 +1,547 @@
+<html>
+
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/vue-advanced-cropper@^1.0.0/dist/style.css" />
+</head>
+
+<body>
+
+  <!-- End Header -->
+  <section class="content">
+    <div class="container">
+      <div class="profile">
+
+        <div class="profile-user-info card">
+          <div class="cover">
+            <a href="/user/edit-profile" class="edit-info"><i class="icon-gear"></i><span>تعديل الملف
+                الشخصي</span></a>
+          </div> <!-- .cover -->
+          <div class="user-info">
+            <div class="main-info">
+              <div class="cont-img">
+                <div class="img">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQE61_Da1jwRCQ/profile-displayphoto-shrink_800_800/0/1602582007711?e=1638403200&v=beta&t=XgTjZVKHbMSbek_DfETGsqXC6VRDx7I82o67s39OiAs"
+                    alt="User Profile photo">
+                </div> <!-- .img -->
+
+                <button class="upload-profile-img" data-toggle="modal" data-target="#profile-uploader-modal">
+                  <span class="icon-camera"></span>
+                </button> <!-- .Not verified -->
+              </div> <!-- .cont-img -->
+              <div class="cont-txt">
+                <h2 class="mb-2"></h2>
+                <h3> <span> - </span></h3>
+              </div> <!-- .cont-txt -->
+              <ul class="social">
+                <li>
+                  <a href="https://sso-test.monshaat.sa" target="_blank"><i class="icon-linkedin-fill"></i></a>
+                </li>
+
+                <li>
+                  <a href="https://www.facebook.com" target="_blank"><i class="icon-twitter-fill"></i></a>
+                </li>
+                <li>
+                  <a href="https://sso-test.monshaat.sa" target="_blank"><i class="icon-facebook-fill"></i></a>
+                </li>
+
+              </ul> <!-- .social -->
+            </div> <!-- .main-info -->
+          </div> <!-- .user-info -->
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </section> <!-- .content -->
+
+
+  <div class="container">
+
+  </div>
+  <div class="modal fade" id="profile-uploader-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" v-bind:class="{ 'modal-md': !showCropper, 'modal-xl': showCropper && !warningModal }">
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-head">
+          <h5 class="modal-title">{{ modalTitle }}</h5>
+          <div class="mr-auto">
+            <div class="close-popup check-cr-cancel-button" data-dismiss="modal">
+              <span class="icon-close"></span>
+              
+            </div>
+          </div>
+
+        </div>
+        <!-- content -->
+        <div>
+          <div class="file-uploader brand-logo-uploader" :class="{ 'has-error': getValidationMessage }">
+            <!-- //////////////////////////////////////////////////////////////////-->
+            <!-- Upload Area -->
+            <!-- //////////////////////////////////////////////////////////////////-->
+            <div class="upload-area" v-show="!showCropper && showUploader && !warningModal">
+              <!--  <label class="fake-uploader" data-accept='["png", "jpg", "jpeg", "svg"]' @click="$refs.file.click()">-->
+              <label class="fake-uploader" for="brand_logo">
+                <div class="uploader-wrapper">
+                  <div>
+                    <span class="icon-camera"></span>
+                    <p>اضغط لاختيار الملفات</p>
+                  </div>
+                </div>
+                <!-- //////////////////////////////////////////////////////////////////-->
+                <!-- Validation Message Area -->
+                <!-- //////////////////////////////////////////////////////////////////-->
+                <span class="text-danger mt-2 d-flex" v-if="getValidationMessage">
+                  {{ getValidationMessage }}
+                </span>
+                <button class="btn btn-primary DS  mt-4" @click="$refs.file.click()">تحميل الصورة</button>
+              </label>
+              <input id="brand_logo" type="file" ref="file" value="image" @change.prevent="loadImage($event)"
+                class="d-none" accept=".png,.jpg,.jpeg,.svg" />
+
+            </div>
+            <!-- //////////////////////////////////////////////////////////////////-->
+            <!-- Cropper Area -->
+            <!-- //////////////////////////////////////////////////////////////////-->
+            <div class="edit-area" v-show="showCropper && !showUploader && !warningModal">
+              <div class="upload-example image-cropper-wrapper">
+                <cropper style="max-height: 200px" class="upload-example-cropper upload-image-cropper" :src="image"
+                  ref="cropper" :transitions="false" :debounce="false" :default-size="defaultSize" :stencil-props="{
+                  lines: {},
+                  handlers: {},
+                  movable: false,
+                  scalable: false,
+                }" image-restriction="stencil" @change="onChange">
+                </cropper>
+                <p class="d-block text-center white-color h7 mt-2 mb-5">اسحب لتحريك الصورة</p>
+                <!-- navigation Area -->
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group ">
+                      <label for="formZoom">
+                        <div class="row no-gutters">
+                          <div class="col">تقريب الصورة</div>
+                          <div class="">{{zoomImgDeg}}</div>
+                        </div>
+                      </label>
+                      <input type="range" class="form-control-range" id="formZoom" @change="onZoom" ref="zoomInput"
+                        min="0.1" max="1" :zoom="zoom" value="0" step="0.1">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group ">
+                      <label for="formRotate">
+                        <div class="row no-gutters">
+                          <div class="col">تدوير الصورة</div>
+                          <div class="">{{rotateImgDeg}}</div>
+                        </div>
+                      </label>
+                      <input type="range" class="form-control-range" @change="onRotate" ref="formRotate" min="0" max="4"
+                        step="1" :value="rotate">
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <span class="text-danger mt-2 d-flex" v-if="getValidationMessage">
+                {{ getValidationMessage }}
+              </span>
+              <div class="row mt-5">
+                <div class="col">
+                  <button class="btn btn-outline-danger DS" @click="showWarningModal">
+                    حذف الصورة
+                  </button>
+                </div>
+                <div class="d-inline-flex">
+                  <label class="DS btn btn-outline-primary ml-2">
+                    تغيير الصورة
+                    <input id="brand_logo1" type="file" value="image" @change.prevent="loadImage($event)" class="d-none"
+                      accept=".png,.jpg,.jpeg,.svg" />
+                  </label>
+                  <button class="DS btn btn-primary" @click.prevent="crop">
+                    <span>حفظ</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //////////////////////////////////////////////////////////////////-->
+        <!-- Warning message Area -->
+        <!-- //////////////////////////////////////////////////////////////////-->
+
+        <div class="text-center" v-if="warningModal">
+          <span class="icon-warning-icon h1"></span>
+          <h6 class="black-color azer-m mt-3">هل أنت متأكد من حذف الصورة الشخصية؟</h6>
+
+          <div class="text-left mt-5">
+            <button class="btn DS btn-outline-primary ml-3" type="button" @click="showWarningModal">إلغاء
+            </button>
+            <button class="btn DS btn-primary" data-dismiss="modal" type="button" @click="deletePhoto">حذف الصورة
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/popper.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/vue@2.5.2/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vue-advanced-cropper@1.8.2/dist/index.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+  <script>
+    var uploadImges = new Vue({
+      el: '#profile-uploader-modal',
+      data: function () {
+        return {
+          showCropper: false,
+          showUploader: true,
+          warningModal: false,
+          body: "",
+          modalTitle: 'تغيير الصورة الشخصية',
+          img: '',
+          imageSaved: true,
+          imageRequiredSize: 2097152,
+          base64Image: "",
+          brandType: "",
+          areas: [],
+          cities: "",
+          imageValidationRule: "",
+          focus: false,
+          zoom: 0,
+          rotate: 0,
+          zoomImgDeg: 0,
+          rotateImgDeg: 0,
+          coordinates: {
+            width: 0,
+            height: 0,
+            left: 0,
+            top: 0,
+          },
+        };
+      },
+      computed: {
+        image: {
+          get() {
+            if (this.img) {
+              this.showCropper = true;
+              this.showUploader = false;
+            }
+            return this.base64Image ? this.base64Image : this.img;
+          },
+          set(value) {
+            this.base64Image = value;
+          },
+        },
+        getValidationMessage: {
+          get() {
+            if (this.imageValidationRule) {
+              return this.imageValidationRule;
+            }
+          },
+          set(value) {
+            this.imageValidationRule = value;
+          },
+        },
+      },
+      methods: {
+
+        defaultSize({ imageSize }) {
+          if (imageSize.width < 200) {
+            return {
+              width: imageSize.width,
+              height: imageSize.height,
+            };
+          } else {
+            return {
+              width: Math.min(imageSize.height, imageSize.width),
+              height: Math.min(imageSize.height, imageSize.width),
+            };
+          }
+        },
+        deletePhoto() {
+          this.warningModal = false,
+            this.showUploader = true,
+            this.showCropper = false,
+            this.imageSaved = false,
+            this.rotate = 0,
+            this.rotateImgDeg = 0,
+            this.zoomImgDeg = 0,
+            this.img = '',
+            document.getElementById("brand_logo").value = "",
+            document.getElementById("brand_logo1").value = "",
+            $('.user-info .img img').attr('src', '')
+        },
+        showWarningModal() {
+          this.warningModal = !this.warningModal;
+          if (this.warningModal) {
+            this.modalTitle = '';
+          } else {
+            this.modalTitle = 'تغيير الصورة الشخصية';
+          }
+        },
+
+        supportedExtensions() {
+          return ["jpg", "png", "jpeg", "svg+xml", "JPG", "PNG", "JPEG", "SVG+XML"];
+        },
+        loadImage(event) {
+          this.getValidationMessage = "";
+          let input = event.target;
+          let fileExtArray = input.files[0].type.split("/");
+          let fileSize = input.files[0].size;
+
+          if (fileExtArray.length > 0) {
+            let fileExt = fileExtArray[1];
+            if (!this.supportedExtensions().includes(fileExt)) {
+              this.getValidationMessage =
+                "فضلاً قم بإرفاق ملف بأحد الصيغ التالية: (jpg, png, jpeg, svg)";
+              return false;
+            }
+          }
+
+          if (fileSize > this.imageRequiredSize) {
+            this.getValidationMessage =
+              "حجم الملف أكبر من السعة المسموحة، فضلاً قم بإرفاق ملف لا يتعدا 2 ميجا";
+            return false;
+          }
+
+          // Ensure that you have a file before attempting to read it
+          if (input.files && input.files[0]) {
+            // create a new FileReader to read this image and convert to base64 format
+            var reader = new FileReader();
+            // Define a callback function to run, when FileReader finishes its job
+            reader.onload = (e) => {
+              // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+              // Read image as base64 and set to imageData
+              this.image = e.target.result;
+              this.img = e.target.result;
+            };
+            // Start the reader job - read file as a data url (base64 format)
+            reader.readAsDataURL(input.files[0]);
+            $('.form-control-range').css('background-size', '0% 0%');
+            this.zoom = 0;
+            this.rotate = 0;
+            this.rotateImgDeg = 0;
+            this.zoomImgDeg = 0;
+          }
+        },
+        crop() {
+          const { coordinates, canvas } = this.$refs.cropper.getResult();
+          this.coordinates = coordinates;
+          // You able to do different manipulations at a canvas
+          // but there we just get a cropped image, that can be used
+          // as src for <img/> to preview result
+          this.image = canvas.toDataURL();
+          this.imageSaved = true,
+
+            $('#profile-uploader-modal').modal('hide');
+          $('.user-info .img img').attr('src', this.image);
+          document.getElementById("brand_logo").value = "";
+          document.getElementById("brand_logo1").value = "";
+          this.rotate = 0;
+          this.rotateImgDeg = 0;
+          this.zoomImgDeg = 0;
+        },
+        // New
+        resize(width, height, left, top) {
+          this.$refs.cropper.setCoordinates({
+            width: width,
+            height: height,
+            left: left,
+            top: top
+          })
+        },
+        onRotate() {
+          const cropper = this.$refs.cropper;
+          if (cropper) {
+            const currentRangeRotateVal = this.$refs.formRotate.value;
+            let lastNum = this.rotate;
+            // let cssRotateNumber = document.querySelector(".vue-preview__image").style.transform;
+            // var fields = cssRotateNumber.split(' ');
+            // var second = fields[2].split('rotate');
+            // let secondFilter = parseInt(second[1].replace(/[{()},deg]/g, ''));
+            if (currentRangeRotateVal > lastNum) {
+              if (currentRangeRotateVal == 4) {
+                let cureentChangeNum = currentRangeRotateVal - lastNum;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(90);
+                  console.log(this.rotate);
+                }
+              }
+              if (currentRangeRotateVal == 3) {
+                let cureentChangeNum = currentRangeRotateVal - lastNum;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(90);
+                }
+              }
+              if (currentRangeRotateVal == 2) {
+                let cureentChangeNum = currentRangeRotateVal - lastNum;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(90);
+                }
+              }
+              if (currentRangeRotateVal == 1) {
+                let cureentChangeNum = currentRangeRotateVal - lastNum;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(90);
+                }
+              }
+            }
+            else {
+              if (currentRangeRotateVal == 0) {
+                let cureentChangeNum = lastNum - currentRangeRotateVal;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(-90);
+                }
+              }
+              if (currentRangeRotateVal == 1) {
+                let cureentChangeNum = lastNum - currentRangeRotateVal;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(-90);
+                }
+              }
+              if (currentRangeRotateVal == 2) {
+                let cureentChangeNum = lastNum - currentRangeRotateVal;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(-90);
+                }
+              }
+              if (currentRangeRotateVal == 3) {
+                let cureentChangeNum = lastNum - currentRangeRotateVal;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(-90);
+                }
+              }
+              if (currentRangeRotateVal == 4) {
+                let cureentChangeNum = lastNum - currentRangeRotateVal;
+                for (let i = 0; i < cureentChangeNum; i++) {
+                  cropper.rotate(-90);
+                }
+              }
+
+            }
+
+          }
+          // change rotate text number value FE
+          this.rotateImgDeg = this.$refs.formRotate.value;
+        },
+        onZoom(value) {
+          console.log('zoom');
+          const currentZoomInput = Math.min(0.9199999999999999, Math.max(0, this.$refs.zoomInput.value) / 0.9999999999999999);
+          const cropper = this.$refs.cropper;
+          if (cropper) {
+            if (cropper.imageSize.height < cropper.imageSize.width) {
+              const minHeight = cropper.sizeRestrictions.minHeight;
+              const imageHeight = cropper.imageSize.height;
+              // Determine the current absolute zoom and the new absolute zoom
+              // to calculate the sought relative zoom value
+              cropper.zoom((imageHeight - this.zoom * (imageHeight - minHeight)) /
+                (imageHeight - currentZoomInput * (imageHeight - minHeight)));
+            } else {
+              const minWidth = cropper.sizeRestrictions.minWidth;
+              const imageWidth = cropper.imageSize.width;
+              cropper.zoom(
+                (imageWidth - this.zoom * (imageWidth - minWidth)) /
+                (imageWidth - currentZoomInput * (imageWidth - minWidth))
+              );
+
+            }
+            console.log('zoom ' + this.zoom);
+            console.log('inputVal ' + currentZoomInput)
+            this.zoomImgDeg = (this.$refs.zoomInput.value) * 10;
+
+          }
+        },
+        onChange(result) {
+          $('.vue-preview__wrapper').bind("mousewheel", function () {
+            return false;
+          });
+          if (this.zoom = NaN) {
+            this.zoom = 0;
+          }
+          const cropper = this.$refs.cropper;
+          if (cropper) {
+            const { coordinates, imageSize } = cropper;
+            if (imageSize.width / imageSize.height >
+              coordinates.width / coordinates.height) {
+              // Determine the position of slider bullet
+              // It's 0 if the stencil has the maximum size and it's 1 if the has the minimum size
+              this.zoom = (cropper.imageSize.height - cropper.coordinates.height) / (cropper.imageSize.height - cropper.sizeRestrictions.minHeight);
+
+              this.rotate = (this.$refs.formRotate.value);
+              // this.zoomImgDeg = (this.$refs.zoomInput.value) * 10;
+
+            } else {
+              this.zoom =
+                (cropper.imageSize.width - cropper.coordinates.width) /
+                (cropper.imageSize.width - cropper.sizeRestrictions.minWidth);
+              // this.zoomImgDeg = (this.$refs.zoomInput.value) * 10;
+              this.rotate = (this.$refs.formRotate.value);
+            }
+          }
+        },
+      },
+      mounted() {
+        // axios.get('../static/imagejson.json').then(response => (this.img = response.img))
+      }
+    });
+
+    $('#profile-uploader-modal').on('shown.bs.modal', function (e) {
+      // do something...
+      uploadImges.$refs.cropper.refresh();
+
+    });
+    $('#profile-uploader-modal').on('hidden.bs.modal', function (e) {
+      uploadImges.$refs.zoomInput.value = 0;
+      uploadImges.$refs.cropper.refresh();
+      uploadImges.image = $('.user-info .img img').attr('src');
+      $('.form-control-range').css('background-size', '0% 0%');
+      uploadImges.rotate = 0;
+      uploadImges.rotateImgDeg = 0;
+      uploadImges.zoomImgDeg = 0;
+      document.getElementById("brand_logo").value = "";
+      document.getElementById("brand_logo1").value = "";
+      if (uploadImges.warningModal) {
+        uploadImges.showWarningModal();
+      }
+      if (!uploadImges.imageSaved) {
+        uploadImges.img = '';
+        uploadImges.showCropper = false;
+        uploadImges.showUploader = true
+      }
+    });
+
+    // $('.user-info .img img').attr('src', uploadImges.img);
+
+    // Change Slider color
+    const rangeInputs = document.querySelectorAll('input[type="range"]')
+
+    function handleInputChange(e) {
+      let target = e.target
+      if (e.target.type !== 'range') {
+        target = document.getElementById('range')
+      }
+      const min = target.min
+      const max = target.max
+      const val = target.value
+
+      target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+    }
+
+    rangeInputs.forEach(input => {
+      input.addEventListener('input', handleInputChange)
+    });
+
+  </script>
+
+</body>
+
+</html>

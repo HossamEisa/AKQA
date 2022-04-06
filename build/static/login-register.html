@@ -1,0 +1,621 @@
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../assets/css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" />
+
+      <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light p-3">
+            <div class="container">
+                <div class="row">
+                    <div class="logo-and-button col-8  order-0 d-flex align-items-center pr-0">
+                        <a href="">
+                            <img class="logo" src="./../../assets/images/logo.svg" alt="اللوجو">
+                        </a>
+                        <button class="navbar-toggler ml-3 ml-lg-5" type="button" data-toggle="collapse"
+                            data-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <!--  -->
+                    <div class="search-profile col-4 order-1 order-lg-2 d-flex justify-content-end align-items-center">
+                        <ul class="d-flex align-items-center justify-content-end  left-menu-items">
+
+
+
+                            <li class="d-inline-block oneIcon mr-2">
+                                <!-- <a href="" class="hvr-pulse">
+                                    <span class="icon-menu"></span>
+                                </a> -->
+                                <div id="monshaat-one-icon" data-width="500px" data-height="600px" data-lang="ar"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--header  -->
+    <div class="container">
+        <div class="tabs-cont">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                        aria-controls="nav-home" aria-selected="true">تسجيل الدخول</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">حساب جديد</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                    <div class="login-cont">
+                        <div class="image w-100 d-none d-lg-block"><img src="../../assets/images/logo.svg"
+                                class="d-block mr-auto"></div>
+
+                        <form class="pb-5">
+
+                            <h5 class="pt-5 mt-5 mt-lg-0 pt-lg-0">
+                                مرحبا بك فى خدمة
+                            </h5>
+                            <h4>
+                                الدخول الموحد لخدمات منشآت </h4>
+                            <div class=" form-group mb-3 p-0">
+                                <div class="input-comp">
+                                    <span class="icon icon-user-colored"><span class="path1"></span><span
+                                            class="path2"></span><span class="path3"></span><span
+                                            class="path4"></span></span> <input
+                                        class="form-control form-control-lg userInput" type="text"
+                                        placeholder="البريد الاكترونى/رقم الهوية">
+                                    <div class="alert alert-warning">هذا الحقل مطلوب</div>
+                                    <span class="icon icon-cr-number"></span>
+                                </div>
+                            </div>
+                            <div class=" form-group mb-3 p-0">
+
+                                <div class="input-comp">
+                                    <span class="icon icon-pass-colored"><span class="path1"></span><span
+                                            class="path2"></span><span class="path3"></span><span
+                                            class="path4"></span><span class="path5"></span></span>
+                                    <input class="form-control form-control-lg passInput" type="password"
+                                        placeholder="•••••••••••">
+                                    <div class="alert alert-warning">هذا الحقل مطلوب</div>
+
+                                    <span class="icon icon-show-pass"></span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row-reverse pt-3 pb-5 mb-5 separator">
+                                <div class="p-2"><button class="gradient-bg btn btn-lg">تسجيل الدخول</button></div>
+
+                                <div class="p-2"><a href="#" class="d-block forgot">هل نسيت كلمة المرور؟</a></div>
+                            </div>
+                            <div class="sign-with d-flex">
+                                <img src="../../assets/images/iam.png">
+                                <h5 class="mt-1">
+                                    <!-- <i class="icon-sign-with"></i> -->
+
+                                    الدخول عبر <a href="#">بوابة النفاذ الوطنى </a></h5>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="register-cont">
+                        <div class="row no-gutters">
+
+                            <div class="col-8 col-md-6">
+                                <div class=" mt-5 form-head">
+                                    <h5>
+                                        مرحبا بك فى خدمة
+                                    </h5>
+                                    <h4>
+                                        الدخول الموحد لخدمات منشآت </h4>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-6">
+                                <div class="image w-100"><img src="../../assets/images/logo.svg"
+                                        class="d-lg-block d-none mr-auto"></div>
+
+                            </div>
+                            <form class="w-100 ">
+                                <div class="row">
+
+
+                                    <div class="col-lg-2 col-12">
+                                        <div class="steps">
+                                            <div class="prog active-section ">
+                                                <div class="icon-cont "><i class="icon icon-fill-data"></i></div>
+                                                <h6>تسجيل البيانات</h6>
+                                            </div>
+
+                                            <div class="prog show-intterests show-form mr-auto ml-1 mr-lg-0 ml-lg-0">
+                                                <div class="icon-cont "><i class="icon icon-star"></i></div>
+                                                <h6>اهتماماتك</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-lg-10 row form-row mr-auto">
+
+                                        <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">الاسم بالكامل</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="الاسم بالكامل ">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">رقم الهوية/الاقامة</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="رقم الهوية">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">عنوان البربد الالكترونى</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="عنوان البريد الالكترونى">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">رقم الجوال</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="رقم الجوال">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">كلمة المرور</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="كلمة المرور  ">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">اعادة كلمة المرور </label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="اعادة كلمة المرور  ">
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-lg-6 col-12 ">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">الاسم بالكامل</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="الاسم بالكامل ">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">عنوان البربد الالكترونى</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="عنوان البريد الالكترونى">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">كلمة المرور</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="كلمة المرور  ">
+                                            </div>
+                                        </div> -->
+                                        <!-- <div class="col-lg-6 col-12">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">رقم الهوية/الاقامة</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="رقم الهوية">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">رقم الجوال</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="رقم الجوال">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">اعادة كلمة المرور </label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="اعادة كلمة المرور  ">
+                                            </div>
+
+                                        </div> -->
+                                        <div class="col-12">
+                                            <div class="form-group pt-1">
+                                                <div class="custom-input checkbox">
+                                                    <div class="input">
+                                                        <input type="checkbox" name="" id="agreement">
+                                                        <span class="mark icon-tick"></span>
+                                                    </div>
+                                                    <label for="agreement">موفق على <span data-toggle="modal"
+                                                            data-target=".agreement-modal">الشروط و
+                                                            الأحكام</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="d-flex flex-row-reverse pt-3 pb-5 ">
+                                                <div class="p-2"><button
+                                                        class="gradient-bg btn btn-lg white-color px-5 to-interests">
+                                                        التالى </button></div>
+
+                                                <div class="p-2"><button class="btn btn-lg cancel-btn px-5">
+                                                        الغاء</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-10 row interests-row no-gutters">
+                                        <div class="interests" style="display: block;">
+                                            <div class="search">
+                                                <div class="form-group no-pad">
+                                                    <input type="search" name="search" id="search"
+                                                        placeholder="ابحث عن اهتماماتك">
+                                                    <label for="search" class="icon icon-search"></label>
+                                                </div>
+                                            </div>
+                                                <div class="scroll-bar">
+                                                    <ul class="row interests-items no-gutters ">
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-01.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>التمويل</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-02.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الاقتصاد</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-03.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الاستثمار</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-04.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>السياسات</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-05.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الإعلام الرقمي</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-06.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>التواصل الاجتماعي</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-01.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>التمويل</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-02.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الاقتصاد</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-03.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الاستثمار</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-04.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>السياسات</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-05.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الإعلام الرقمي</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-06.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>التواصل الاجتماعي</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-01.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>التمويل</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-02.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الاقتصاد</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-03.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الاستثمار</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-04.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>السياسات</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-05.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>الإعلام الرقمي</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                        <li class="col-6 col-md-4 item-col">
+                                                            <div class="item">
+                                                                <input type="checkbox">
+                                                                <div class="cont-img">
+                                                                    <img src="../../assets/images/interests-06.svg"
+                                                                        alt="interest">
+                                                                </div>
+                                                                <p>التواصل الاجتماعي</p>
+                                                                <i class="icon icon-tick"></i>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    
+                                                </div>
+                                            <div class="col-12">
+                                                <div class="d-flex flex-row-reverse pt-3 pb-5 ">
+                                                    <div class="p-2"><button
+                                                            class="gradient-bg btn btn-lg white-color px-5">
+                                                            التالى </button></div>
+
+                                                    <div class="p-2"><button class="btn btn-lg cancel-btn px-5">
+                                                            الغاء</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                            <!-- <div class="redirection main-card w-100">
+                                <div class="cont w-100">
+                                    <h2>تنويه</h2>
+                                    <p>
+                                        عزيزي العميل يجب أن يكون لديك حساب مسبق في أبشر من خلال
+                                        <a href="javascript:void(0)"> رابط التسجيل</a>
+                                        <span>سيتم تحويلك تلقائيا إلى بوابة النفاذ الموحد</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progressbar">
+                                            <div class="bar gradient-bg"></div> 
+                                        </div> 
+                                        <div class="progress-number"><span id="count">10</span> ثواني</div>
+                                        <
+                                    </div> 
+                                    <p>
+                                        <span>في حالة لم يتم تحويلك الرجاء <a href="javascript:void(0)"> الضغط
+                                                هنا</a></span>
+                                    </p>
+                                </div> 
+                            </div>
+
+
+                        </div> -->
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="w-100 gradient-bg bottom-bar"></div>
+
+
+                <ul class="tabs-footer d-lg-flex d-none">
+                    <li><a href="">تواصل معنا</a></li>
+                    <li><a href="">الفعاليات</a></li>
+                    <li><a href="">خدماتنا</a></li>
+                    <li><a href="">جميع الحقوق محفوظة&copy; 2020 <span>منشآت</span> </a></li>
+                </ul>
+
+                <div class="tabs-mobile-footer w-100 d-lg-none">
+                    <div class="logo mt-5">
+                        <img src="../../assets/images/logo.svg" alt="Footer Logo" class="d-block m-auto" />
+                    </div> <!-- .logo -->
+                    <h5 class="text-center mt-3">
+                        جميع الحقوق محفوظة&copy; 2020 <span>منشآت</span>
+                    </h5>
+                    <ul>
+                        <li><a href="">سياسة الخصوصية</a></li>
+                        <li><a href="">خدماتنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-lg-3">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <img src="../../assets/images/logo.svg" alt="Footer Logo" />
+                        </div> <!-- .logo -->
+                        <div class="txt">
+                            <span>إحدى مبادرات منشآت</span>
+                            <span>جميع الحقوق محفوظة © 2019</span>
+                        </div> <!-- .txt -->
+                    </div> <!-- .footer-logo -->
+                </div> <!-- .col col-12 col-lg-3 -->
+                <div class="col col-12 col-lg-3">
+                    <div class="footer-menu">
+                        <h2>روابط مهمة</h2>
+                        <ul>
+                            <li><a href="javascript:void(0)" title="سياسة الإستخدام">سياسة الإستخدام</a></li>
+                            <li><a href="javascript:void(0)" title="الشروط والأحكام">الشروط والأحكام</a></li>
+                            <li><a href="javascript:void(0)" title="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div> <!-- .footer-menu -->
+                </div> <!-- .col col-12 col-lg-3 -->
+                <div class="col col-12 col-lg-3">
+                    <div class="footer-menu">
+                        <h2>تواصل معنا</h2>
+                        <ul>
+                            <li><a href="javascript:void(0)" title="9200018888"><i class="icon-old-handphone"></i>
+                                    </h35=>
+                                    9200018888</a></li>
+                            <li><a href="javascript:void(0)" title="ep@monshaat.gov.sa"><i
+                                        class="icon-Union-4"></i>ep@monshaat.gov.sa</a></li>
+                            <li><a href="javascript:void(0)" title="الرياض - المملكة العربية السعودية"><i
+                                        class="icon-map-pin-silhouette"></i>الرياض - المملكة العربية السعودية</a></li>
+                        </ul>
+                    </div> <!-- .footer-menu -->
+                </div> <!-- .col col-12 col-lg-3 -->
+                <div class="col col-12 col-lg-3">
+                    <div class="social">
+                        <h2>تباعنا عبر</h2>
+                        <ul>
+                            <li><a href="javascript:void(0)" title="twitter"><i class="icon-twitter"></i></a></li>
+                            <li><a href="javascript:void(0)" title="facebook"><i class="icon-facebook"></i></a></li>
+                            <li><a href="javascript:void(0)" title="instagram"><i class="icon-instagram"></i></a></li>
+                            <li><a href="javascript:void(0)" title="youtube"><i class="icon-youtube"></i></a></li>
+                            <li><a href="javascript:void(0)" title="linkedin"><i class="icon-linkedin"></i></a></li>
+                        </ul> <!-- .social -->
+                    </div> <!-- .social -->
+                </div> <!-- .col col-12 col-lg-3 -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+        <script src="../../assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="../../assets/js/swiper.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
+        <script src=" https://www.monshaat.gov.sa/one-icon.js?api_key=83ea49ea2f25e8a3f2f290721104e25c"></script>
+        <script src="../../assets/js/main.js" type="text/javascript"></script>
+    </footer> <!-- footer  -->
+
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+[
+  {
+    "title": {
+      "content": "موعد استشارة",
+      "names": [
+        "Name1",
+        "Name2"
+      ]
+    },
+    "time": {
+      "type": "صباحًا",
+      "hours": "10"
+    },
+
+    "person_name": {
+      "name": "محمد محمد إبراهيم"
+    },
+    "rating": {
+      "value": 4,
+      "text": "4"
+    },
+    "event_fields": [
+      "التجارة الإلكترونية",
+      "التسويق"
+    ],
+
+    "body": {
+      "label": "المتن",
+      "content": "\r\nهي فعالية إرشاد جماعي تقام في مدن مختلفة في نفس الوقت، على مدى ساعتين وذلك في آخر أربعاء من كل شهر ميلادي .\r\nماهي الفئة المستهدفة:\r\n- رواد الأعمال\r\n- المهتمون بريادة الأعمال\r\nالمدن التي سوف تقام بها قهوة منشآت:\r\n\r\n- الرياض - الخبر - جدة -الأحساء\r\n\r\n-تبوك -حائل -عنيزة -بريدة\r\n\r\nنجران -أبها -المدينة المنورة -سكاكا\r\n\r\n&nbsp;\r\n\r\n-تبدأ الفعالية&nbsp; في تمام الساعة السابعة والنصف إلى التاسعة والنصف مساءً\r\n-عدد الحضور لكل فعالية: 40 شخص تقريبا\r\n\r\n- مدة الفعالية ساعتان، في الساعة الأولى: محاضرة\r\n\r\nفي الساعة الثانية: أسئلة و أجوبة.\r\n\r\n&nbsp;\r\n\r\nللحضور يرجى تسجيل الحضورة على الرابط أدناه.\r\n\r\n*أضغط هنا*"
+    },
+    "field_date_gregorian": {
+      "label": "Date Gregorian",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_end_date_gregorian": {
+      "label": "End Date",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_event_place": {
+      "label": "Event Place",
+      "content": "عدة مدن في المملكة"
+    },
+    "nid": {
+      "label": "Nid",
+      "content": "19595"
+    },
+    "nid_1": {
+      "label": "Calendare_file",
+      "content": "<a href=\"https://www.monshaat.gov.sa/ar/addtocal/19595\">19595</a>"
+    },
+    "path": {
+      "label": "المسار",
+      "content": "/ar/event/19595"
+    },
+    "path_1": {
+      "label": "Path-2",
+      "content": "https://www.monshaat.gov.sa/ar/event/19595"
+    },
+    "nothing": {
+      "label": "Custom text",
+      "content": "/addtocal/19595"
+    },
+
+    "date": "2020-12-10"
+  },
+  {
+    "title": {
+      "content": "موعد استشارة",
+      "names": [
+        "Name1",
+        "Name2"
+      ]
+    },
+    "time": {
+      "type": "صباحًا",
+      "hours": "8"
+    },
+
+    "person_name": {
+      "name": "حسام عيسى"
+    },
+    "rating": {
+      "value": 4,
+      "text": "4"
+    },
+    "event_fields": [
+      "التجارة الإلكترونية",
+      "التسويق"
+    ],
+
+    "body": {
+      "label": "المتن",
+      "content": "\r\nهي فعالية إرشاد جماعي تقام في مدن مختلفة في نفس الوقت، على مدى ساعتين وذلك في آخر أربعاء من كل شهر ميلادي .\r\nماهي الفئة المستهدفة:\r\n- رواد الأعمال\r\n- المهتمون بريادة الأعمال\r\nالمدن التي سوف تقام بها قهوة منشآت:\r\n\r\n- الرياض - الخبر - جدة -الأحساء\r\n\r\n-تبوك -حائل -عنيزة -بريدة\r\n\r\nنجران -أبها -المدينة المنورة -سكاكا\r\n\r\n&nbsp;\r\n\r\n-تبدأ الفعالية&nbsp; في تمام الساعة السابعة والنصف إلى التاسعة والنصف مساءً\r\n-عدد الحضور لكل فعالية: 40 شخص تقريبا\r\n\r\n- مدة الفعالية ساعتان، في الساعة الأولى: محاضرة\r\n\r\nفي الساعة الثانية: أسئلة و أجوبة.\r\n\r\n&nbsp;\r\n\r\nللحضور يرجى تسجيل الحضورة على الرابط أدناه.\r\n\r\n*أضغط هنا*"
+    },
+    "field_date_gregorian": {
+      "label": "Date Gregorian",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_end_date_gregorian": {
+      "label": "End Date",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_event_place": {
+      "label": "Event Place",
+      "content": "عدة مدن في المملكة"
+    },
+    "nid": {
+      "label": "Nid",
+      "content": "19595"
+    },
+    "nid_1": {
+      "label": "Calendare_file",
+      "content": "<a href=\"https://www.monshaat.gov.sa/ar/addtocal/19595\">19595</a>"
+    },
+    "path": {
+      "label": "المسار",
+      "content": "/ar/event/19595"
+    },
+    "path_1": {
+      "label": "Path-2",
+      "content": "https://www.monshaat.gov.sa/ar/event/19595"
+    },
+    "nothing": {
+      "label": "Custom text",
+      "content": "/addtocal/19595"
+    },
+
+    "date": "2020-12-08"
+  },
+
+  {
+    "title": {
+      "content": "موعد استشارة",
+      "names": [
+        "Name1",
+        "Name2"
+      ]
+    },
+    "time": {
+      "type": "صباحًا",
+      "hours": "6:00"
+    },
+
+    "person_name": {
+      "name": "حسام asdasdas"
+    },
+    "rating": {
+      "value": 4,
+      "text": "4"
+    },
+    "event_fields": [
+      "التجارة الإلكترونية",
+      "التسويق"
+    ],
+
+    "body": {
+      "label": "المتن",
+      "content": "\r\nهي فعالية إرشاد جماعي تقام في مدن مختلفة في نفس الوقت، على مدى ساعتين وذلك في آخر أربعاء من كل شهر ميلادي .\r\nماهي الفئة المستهدفة:\r\n- رواد الأعمال\r\n- المهتمون بريادة الأعمال\r\nالمدن التي سوف تقام بها قهوة منشآت:\r\n\r\n- الرياض - الخبر - جدة -الأحساء\r\n\r\n-تبوك -حائل -عنيزة -بريدة\r\n\r\nنجران -أبها -المدينة المنورة -سكاكا\r\n\r\n&nbsp;\r\n\r\n-تبدأ الفعالية&nbsp; في تمام الساعة السابعة والنصف إلى التاسعة والنصف مساءً\r\n-عدد الحضور لكل فعالية: 40 شخص تقريبا\r\n\r\n- مدة الفعالية ساعتان، في الساعة الأولى: محاضرة\r\n\r\nفي الساعة الثانية: أسئلة و أجوبة.\r\n\r\n&nbsp;\r\n\r\nللحضور يرجى تسجيل الحضورة على الرابط أدناه.\r\n\r\n*أضغط هنا*"
+    },
+    "field_date_gregorian": {
+      "label": "Date Gregorian",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_end_date_gregorian": {
+      "label": "End Date",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_event_place": {
+      "label": "Event Place",
+      "content": "عدة مدن في المملكة"
+    },
+    "nid": {
+      "label": "Nid",
+      "content": "19595"
+    },
+    "nid_1": {
+      "label": "Calendare_file",
+      "content": "<a href=\"https://www.monshaat.gov.sa/ar/addtocal/19595\">19595</a>"
+    },
+    "path": {
+      "label": "المسار",
+      "content": "/ar/event/19595"
+    },
+    "path_1": {
+      "label": "Path-2",
+      "content": "https://www.monshaat.gov.sa/ar/event/19595"
+    },
+    "nothing": {
+      "label": "Custom text",
+      "content": "/addtocal/19595"
+    },
+
+    "date": "2020-12-07"
+  },
+  {
+    "title": {
+      "content": "موعد استشارة",
+      "names": [
+        "Name1",
+        "Name2"
+      ]
+    },
+    "time": {
+      "type": "صباحًا",
+      "hours": "5:00"
+    },
+
+    "person_name": {
+      "name": "حسام aaaaa"
+    },
+    "rating": {
+      "value": 4,
+      "text": "4"
+    },
+    "event_fields": [
+      "التجارة الإلكترونية",
+      "التسويق"
+    ],
+
+    "body": {
+      "label": "المتن",
+      "content": "\r\nهي فعالية إرشاد جماعي تقام في مدن مختلفة في نفس الوقت، على مدى ساعتين وذلك في آخر أربعاء من كل شهر ميلادي .\r\nماهي الفئة المستهدفة:\r\n- رواد الأعمال\r\n- المهتمون بريادة الأعمال\r\nالمدن التي سوف تقام بها قهوة منشآت:\r\n\r\n- الرياض - الخبر - جدة -الأحساء\r\n\r\n-تبوك -حائل -عنيزة -بريدة\r\n\r\nنجران -أبها -المدينة المنورة -سكاكا\r\n\r\n&nbsp;\r\n\r\n-تبدأ الفعالية&nbsp; في تمام الساعة السابعة والنصف إلى التاسعة والنصف مساءً\r\n-عدد الحضور لكل فعالية: 40 شخص تقريبا\r\n\r\n- مدة الفعالية ساعتان، في الساعة الأولى: محاضرة\r\n\r\nفي الساعة الثانية: أسئلة و أجوبة.\r\n\r\n&nbsp;\r\n\r\nللحضور يرجى تسجيل الحضورة على الرابط أدناه.\r\n\r\n*أضغط هنا*"
+    },
+    "field_date_gregorian": {
+      "label": "Date Gregorian",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_end_date_gregorian": {
+      "label": "End Date",
+      "content": "2020-12-25 00:00:00"
+    },
+    "field_event_place": {
+      "label": "Event Place",
+      "content": "عدة مدن في المملكة"
+    },
+    "nid": {
+      "label": "Nid",
+      "content": "19595"
+    },
+    "nid_1": {
+      "label": "Calendare_file",
+      "content": "<a href=\"https://www.monshaat.gov.sa/ar/addtocal/19595\">19595</a>"
+    },
+    "path": {
+      "label": "المسار",
+      "content": "/ar/event/19595"
+    },
+    "path_1": {
+      "label": "Path-2",
+      "content": "https://www.monshaat.gov.sa/ar/event/19595"
+    },
+    "nothing": {
+      "label": "Custom text",
+      "content": "/addtocal/19595"
+    },
+
+    "date": "2020-12-07"
+  }
+
+
+
+
+
+
+
+]
