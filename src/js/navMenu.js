@@ -32,9 +32,6 @@ const navbarMenu = document.querySelector(".mobile-menu-ul");
 
 // Show and Hide Navbar Menu
 burgerMenu.addEventListener("click", () => {
-
-
-
     burgerMenu.classList.toggle("is-active");
     navbarMenu.classList.toggle("is-active");
     wrapper.classList.toggle("is-open");
@@ -60,3 +57,43 @@ document.getElementById('menu-overlay').addEventListener('click', () => {
         }
     }, 100)
 });
+
+
+
+document.querySelectorAll('.menu-hasdropdown').forEach(element => element.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    // let innerLists = element.querySelector('ul');
+    if (element) {
+        if (!element.classList.contains("is-active")) {
+            document.querySelector("ul").querySelectorAll("ul").forEach(elm => {
+                if (!isDescendant(elm, element)) {
+                    elm.classList.remove("is-active");
+                }
+            });
+        }
+        element.classList.toggle("is-active");
+    }
+
+
+    let childItem = element.querySelector('.menu-dropdown');
+
+    // if (element.classList.contains("is-active")) {
+    //     element.querySelector('.menu-dropdown').style.maxHeight = element.querySelector('.menu-dropdown').scrollHeight + "px";
+    // } else {
+    //     element.querySelector('.menu-dropdown').removeAttribute("style");
+    // }
+
+}));
+
+function isDescendant(parent, child) {
+    let node = child.parentNode;
+    while (node != null) {
+        if (node === parent) {
+            return true;
+        }
+        node = node.parentNode;
+    }
+    return false;
+}

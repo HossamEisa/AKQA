@@ -36,11 +36,11 @@
                                     aria-label="Search">
                             </form>
                         </div>
-                        <label id="menu-toggler" for="menu" class="js-scroll slide-left" aria-hidden="true">
+                        <div id="menu-toggler" class="js-scroll slide-left" aria-hidden="true">
                             <span class="menu-bar"></span>
                             <span class="menu-bar"></span>
                             <span class="menu-bar"></span>
-                        </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,38 +50,36 @@
                         <div class="logo">
                             <a href="/" title="Home"><img src="./images/DermaWorld.png" alt="main logo" width="158"></a>
                         </div>
-                        <input type="checkbox" id="menu">
-                        <ul role="list">
-                            <li role="listitem"><a href=" #">Bedingungen</a></li>
-                            <li role="listitem" class="menu-hasdropdown levl-one-menu">
-                                <a href="#">Behandlugen
-                                </a>
-                                <label class="label" title="toggle menu" for="Behandlugen">
-                                    <span class="icon-arrow-down"></span>
-                                </label> 
-                                <input type="checkbox" id="Behandlugen">
-                                <ul role="list" class="menu-dropdown" tabindex="2">
-                                    <li role="listitem"><a href="/" class="menu-item">History</a></li>
-                                    <li role="listitem"><a href="/" class="menu-item">Mission</a></li>
-                                    <li role="listitem" class="menu-hasdropdown menu-hasflyout levl-two-menu">
+                        <ul>
+                            <li><a href=" #">Bedingungen</a></li>
+                            <li class="menu-hasdropdown levl-one-menu">
+                                <span tabindex="0" class="menu-item">Behandlugen
+                                    <span class="icon-area" title="toggle menu">
+                                        <span class="icon-arrow-down"></span>
+                                    </span>
+                                </span>
+
+                                <ul class="menu-dropdown" tabindex="1">
+                                    <li><a href="/" class="menu-item">History</a></li>
+                                    <li><a href="/" class="menu-item">Mission</a></li>
+                                    <li class="menu-hasdropdown menu-hasflyout levl-two-menu">
                                         <span class="menu-item">Services
-                                            <label class="label" title="toggle menu" for="services">
+                                            <span class="icon-area">
                                                 <span class="icon-arrow-down"></span>
-                                            </label>
+                                            </span>
                                         </span>
-                                        <input type="checkbox" id="services">
-                                        <ul role="list" class="menu-dropdown">
-                                            <li role="listitem"><a href="/">Service 1</a></li>
-                                            <li role="listitem"><a href="/">Service 2</a></li>
-                                            <li role="listitem"><a href="/">Service 3</a></li>
+                                        <ul class="menu-dropdown">
+                                            <li><a href="/">Service 1</a></li>
+                                            <li><a href="/">Service 2</a></li>
+                                            <li><a href="/">Service 3</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li role="listitem"><a href="#">Veranstaltungen</a></li>
-                            <li role="listitem"><a href="#">Werkzeuge</a></li>
-                            <li role="listitem"><a href="#">Forschung und Erkenntnisse</a></li>
-
+                            <li><a href="#">Veranstaltungen</a></li>
+                            <li><a href="#">Werkzeuge</a></li>
+                            <li><a href="#">Forschung und Erkenntnisse</a></li>
+                            <!-- search in mobile-->
                             <li>
                                 <form>
                                     <input class="searched" type="search" name="Search" id="search-mob"
@@ -144,6 +142,7 @@
             </section>
             <!-- how-work Section-->
             <section class="how-work">
+                <h2 style="display: none;"> how work section</h2>
                 <div class="container">
                     <div class="row">
                         <div class="image js-scroll slide-left">
@@ -227,13 +226,13 @@
                                 dysregulated immune
                                 system
                                 by(1):</p>
-                            <ul role="list" class="dashed-list">
-                                <li role="listitem" class="js-scroll slide-left" tabindex="0">Reducing markers of skin
+                            <ul class="dashed-list">
+                                <li class="js-scroll slide-left" tabindex="0">Reducing markers of skin
                                     inflammation</li>
-                                <li role="listitem" class="js-scroll fade-in-bottom" tabindex="0">Improving markers of
+                                <li class="js-scroll fade-in-bottom" tabindex="0">Improving markers of
                                     skin barrier
                                     integrity</li>
-                                <li role="listitem" class="js-scroll slide-right" tabindex="0">Reducing epidermal
+                                <li class="js-scroll slide-right" tabindex="0">Reducing epidermal
                                     thickness</li>
                             </ul>
                             <div class="js-scroll slide-right">
@@ -454,13 +453,13 @@
                     <!-- Links footer -->
                     <div class="footer-menu js-scroll fade-in-bottom">
                         <nav>
-                            <ul role="list">
-                                <li role="listitem"><a href="/">Contact</a></li>
-                                <li role="listitem"><a href="/">Imprint</a></li>
-                                <li role="listitem"><a href="/">Conditions</a></li>
-                                <li role="listitem"><a href="/">Terms of use </a></li>
-                                <li role="listitem"><a href="/">Privacy</a></li>
-                                <li role="listitem"><a href="/">Cookie content</a></li>
+                            <ul>
+                                <li><a href="/">Contact</a></li>
+                                <li><a href="/">Imprint</a></li>
+                                <li><a href="/">Conditions</a></li>
+                                <li><a href="/">Terms of use </a></li>
+                                <li><a href="/">Privacy</a></li>
+                                <li><a href="/">Cookie content</a></li>
                             </ul>
                         </nav>
                     </div>

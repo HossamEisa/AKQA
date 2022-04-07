@@ -404,14 +404,6 @@ p:last-child {
   max-width: 100%;
   padding: 0 15px;
 }
-.header .header-top label {
-  padding: 0 15px;
-}
-@media only screen and (min-width: 992px) {
-  .header .header-top label {
-    padding: 10px;
-  }
-}
 .header .header-top .searched {
   display: none;
   width: 22.125rem;
@@ -441,6 +433,12 @@ p:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 15px;
+}
+@media only screen and (min-width: 992px) {
+  .header .header-top #menu-toggler {
+    padding: 10px;
+  }
 }
 .header .header-top #menu-toggler .menu-bar {
   width: 30px;
@@ -478,10 +476,8 @@ p:last-child {
   z-index: 1;
   /* hide show mixin */
   /* global  styles */
-  /* narrow styles */
-  /* large styles */
   /* look and feel only, not needed for core menu*/
-  /* narrow  */
+  /* large styles */
 }
 @media screen and (max-width: 992px) {
   .header .header-nav .container {
@@ -516,7 +512,7 @@ p:last-child {
     position: static;
   }
 }
-.header .header-nav .menu .menu-hasdropdown .label {
+.header .header-nav .menu .menu-hasdropdown .icon-area {
   position: absolute;
   width: 100%;
   top: 13px;
@@ -526,7 +522,7 @@ p:last-child {
   justify-content: flex-end;
 }
 @media only screen and (min-width: 992px) {
-  .header .header-nav .menu .menu-hasdropdown .label .icon-arrow-down {
+  .header .header-nav .menu .menu-hasdropdown .icon-area .icon-arrow-down {
     display: none;
   }
 }
@@ -566,27 +562,17 @@ p:last-child {
     font-weight: var(--bold);
   }
 }
-.header .header-nav .menu-dropdown,
-.header .header-nav .menu input[type=checkbox] {
-  display: none;
-}
-.header .header-nav .menu label:hover {
+.header .header-nav .menu icon-area:hover {
   cursor: pointer;
 }
-@media screen and (max-width: 992px) {
-  .header .header-nav .menu > ul li > ul,
-.header .header-nav .menu-righticon {
-    display: none;
-  }
-  .header .header-nav .menu > ul li input[type=checkbox]:checked + ul {
-    display: block;
-    animation: grow 1.5s ease-in-out;
-  }
+.header .header-nav .menu-dropdown a {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-@media only screen and (max-width: 992px) and (min-width: 992px) {
-  .header .header-nav .menu > ul li input[type=checkbox]:checked + ul {
-    display: flex;
-    animation: grow 0.5s ease-in-out;
+@media only screen and (min-width: 992px) {
+  .header .header-nav .menu-dropdown a {
+    border: none;
+    padding: 10px 0 !important;
   }
 }
 @media screen and (max-width: 992px) {
@@ -620,18 +606,63 @@ p:last-child {
     left: 0;
   }
 }
+@media screen and (max-width: 992px) {
+  .header .header-nav .menu a,
+.header .header-nav .menu .menu-item {
+    padding: 10px;
+  }
+  .header .header-nav .menu > ul span[class^=icon] {
+    float: right;
+    padding: 0px 10px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header .header-nav .menu-dropdown a,
+.header .header-nav .menu-dropdown .menu-item {
+    background: #E6E7E8;
+    padding-left: 1.25rem;
+    color: #00609C;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header .header-nav .menu-hasdropdown > .menu-dropdown {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .header .header-nav .menu-hasdropdown .icon-area span {
+    transition: 0.5s ease-in-out;
+  }
+  .header .header-nav .menu-hasdropdown.is-active > .menu-item > .icon-area span {
+    transform: rotate(180deg);
+  }
+  .header .header-nav .menu-hasdropdown.is-active > .menu-dropdown {
+    max-height: 500px !important;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header .header-nav .menu-hasflyout > ul a {
+    background: #00609C;
+    padding-left: 30px;
+    color: #FFF;
+  }
+}
 @media screen and (min-width: 992px) {
+  .header .header-nav .menu-dropdown {
+    display: none;
+  }
   .header .header-nav .mobile-menu-ul .logo {
     display: none;
   }
-  .header .header-nav .menu > label,
-.header .header-nav input[type=checkbox] {
-    display: none;
-  }
-  .header .header-nav .menu li a {
+  .header .header-nav .menu li a,
+.header .header-nav .menu li .menu-item {
     padding: 10px 23px;
   }
-  .header .header-nav .menu li a .icon-arrow-down {
+  .header .header-nav .menu li a .icon-arrow-down,
+.header .header-nav .menu li .menu-item .icon-arrow-down {
     display: none;
   }
   .header .header-nav .menu li:first-child a {
@@ -672,15 +703,15 @@ p:last-child {
     font-weight: var(--bold);
     animation: grow 0.5s ease-in-out;
   }
-  .header .header-nav .menu-hasdropdown:hover > ul {
+  .header .header-nav .menu-hasdropdown:hover > .menu-dropdown {
     display: block;
     animation: grow 1.5s ease-in-out;
   }
 }
 @media only screen and (min-width: 992px) and (min-width: 992px) {
-  .header .header-nav .menu-hasdropdown:hover > ul {
+  .header .header-nav .menu-hasdropdown:hover > .menu-dropdown {
     display: flex;
-    animation: grow 0.5s ease-in-out;
+    animation: grow 0.7s linear;
   }
 }
 @media screen and (min-width: 992px) {
@@ -732,50 +763,6 @@ p:last-child {
   }
   .header .header-nav .menu-hasflyout > ul a:hover {
     border-color: #FFF;
-  }
-}
-@media screen and (min-width: 992px) {
-  .header .header-nav .menu-hasflyout .menu-downicon {
-    display: none;
-  }
-}
-.header .header-nav .menu-dropdown a {
-  padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-@media only screen and (min-width: 992px) {
-  .header .header-nav .menu-dropdown a {
-    border: none;
-    padding: 10px 0 !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .header .header-nav .menu > label {
-    background: #000000;
-    display: block;
-    padding: 10px;
-    text-align: right;
-    color: #fff;
-  }
-  .header .header-nav .menu a,
-.header .header-nav .menu .menu-item {
-    padding: 10px;
-  }
-  .header .header-nav .menu > ul span[class^=icon] {
-    float: right;
-    padding: 0px 10px;
-    font-size: 10px;
-  }
-  .header .header-nav .menu-dropdown a,
-.header .header-nav .menu-dropdown .menu-item {
-    background: #E6E7E8;
-    padding-left: 1.25rem;
-    color: #00609C;
-  }
-  .header .header-nav .menu-hasflyout > ul a {
-    background: #00609C;
-    padding-left: 30px;
-    color: #FFF;
   }
 }
 

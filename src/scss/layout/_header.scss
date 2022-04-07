@@ -29,13 +29,6 @@
             padding: 0 15px;
         }
 
-        label {
-            padding: 0 15px;
-
-            @include mq('lg') {
-                padding: 10px;
-            }
-        }
 
         .searched {
             display: none;
@@ -67,6 +60,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 0 15px;
+
+            @include mq('lg') {
+                padding: 10px;
+            }
 
             .menu-bar {
                 width: 30px;
@@ -131,13 +129,10 @@
 
             @include mq('lg') {
                 display: flex;
-                animation: grow .5s ease-in-out; // optional animation
+                animation: grow .7s linear; // optional animation
             }
         }
 
-        @mixin hide () {
-            display: none;
-        }
 
         /* global  styles */
 
@@ -159,7 +154,6 @@
                 --bold: 700;
                 padding: 0;
                 list-style: none;
-
             }
 
             .menu-hasdropdown {
@@ -169,8 +163,7 @@
                     position: static;
                 }
 
-
-                .label {
+                .icon-area {
                     position: absolute;
                     width: 100%;
                     top: 13px;
@@ -234,29 +227,26 @@
 
 
 
-        .menu-dropdown,
-        .menu input[type="checkbox"] {
-            // hide defaults
-            @include hide;
-        }
 
-        .menu label:hover {
+
+        .menu icon-area:hover {
             cursor: pointer;
         }
 
-        /* narrow styles */
+        /* look and feel only, not needed for core menu*/
+
+        // optional animation for display none/block
+        .menu-dropdown a {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            @include mq('lg') {
+                border: none;
+                padding: 10px 0 !important;
+            }
+        }
 
         @media screen and (max-width: 992px) {
-
-            // hide navigation and right icons
-            .menu>ul li>ul,
-            .menu-righticon {
-                @include hide;
-            }
-
-            .menu>ul li input[type="checkbox"]:checked+ul {
-                @include show;
-            }
 
             .mobile-menu-ul {
                 position: fixed;
@@ -285,11 +275,82 @@
                     left: 0;
                 }
             }
+
+            .menu {
+
+                a,
+                .menu-item {
+                    padding: 10px;
+                }
+
+                >ul {
+                    span[class^="icon"] {
+                        float: right;
+                        padding: 0px 10px;
+                        font-size: 10px;
+                    }
+                }
+
+
+            }
+
+            .menu-dropdown {
+
+                a,
+                .menu-item {
+                    background: $moon-grey;
+                    padding-#{$left}: calcRem(20);
+                    color: $primary;
+
+                }
+            }
+
+            .menu-hasdropdown {
+                >.menu-dropdown {
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: .5s ease-in-out;
+                }
+
+                .icon-area {
+                    span {
+                        transition: .5s ease-in-out;
+                    }
+                }
+
+                &.is-active {
+                    >.menu-item {
+                        >.icon-area {
+                            span {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    >.menu-dropdown {
+                        max-height: 500px !important;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                    }
+                }
+            }
+
+
+
+            .menu-hasflyout>ul a {
+                background: $primary;
+                padding-left: 30px;
+                color: $white;
+            }
+
         }
 
         /* large styles */
 
         @media screen and (min-width: 992px) {
+            .menu-dropdown {
+                display: none;
+            }
 
             .mobile-menu-ul {
                 .logo {
@@ -297,16 +358,11 @@
                 }
             }
 
-            // hide show navigation button and checkboxes
-            .menu>label,
-            input[type="checkbox"] {
-                @include hide;
-            }
-
             .menu {
                 li {
 
-                    a {
+                    a,
+                    .menu-item {
                         padding: 10px 23px;
 
                         .icon-arrow-down {
@@ -330,7 +386,6 @@
 
             // hover logics
             .menu-hasdropdown {
-
                 &:hover {
 
                     >a,
@@ -367,19 +422,16 @@
                                 display: none;
                             }
                         }
-
                     }
 
-                    >ul {
+                    >.menu-dropdown {
                         @include show;
                     }
+
 
                 }
 
                 &.menu-hasflyout {
-
-
-
                     &:hover {
 
                         >a,
@@ -445,66 +497,11 @@
 
             }
 
-            .menu-hasflyout .menu-downicon {
-                @include hide;
-            }
         }
 
-        /* look and feel only, not needed for core menu*/
-
-        // optional animation for display none/block
-        .menu-dropdown a {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-            @include mq('lg') {
-                border: none;
-                padding: 10px 0 !important;
-
-            }
-        }
-
-        /* narrow  */
-        @media screen and (max-width: 992px) {
-            .menu {
-                >label {
-                    background: $black;
-                    display: block;
-                    padding: 10px;
-                    text-align: right;
-                    color: #fff;
-                }
-
-                a,
-                .menu-item {
-                    padding: 10px;
-                }
-
-                >ul {
-                    span[class^="icon"] {
-                        float: right;
-                        padding: 0px 10px;
-                        font-size: 10px;
-                    }
-                }
 
 
-            }
 
-            .menu-dropdown a,
-            .menu-dropdown .menu-item {
-                background: $moon-grey;
-                padding-#{$left}: calcRem(20);
-                color: $primary;
-
-            }
-
-            .menu-hasflyout>ul a {
-                background: $primary;
-                padding-left: 30px;
-                color: $white;
-            }
-        }
     }
 }
 
