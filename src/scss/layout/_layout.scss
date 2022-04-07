@@ -13,16 +13,18 @@
                 display: none;
             }
         }
+
         #menu-overlay {
             position: fixed;
             width: 100%;
             top: 0;
             bottom: 0;
-            background: rgba(0,0,0, 0.3);
+            background: rgba(0, 0, 0, 0.3);
             z-index: 1;
         }
     }
 
+    // Header and footer top and buttom
     .header,
     .footer {
         -webkit-box-flex: 0;
@@ -32,6 +34,7 @@
         max-width: none;
     }
 
+    // Main Css
     .main {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;

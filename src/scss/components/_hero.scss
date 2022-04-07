@@ -95,7 +95,7 @@
                     }
 
                     @include mq('xxl') {
-                        left: 20%;
+                        left: 21%;
                         top: 30px;
                     }
 
@@ -113,6 +113,9 @@
 
         .carousel-button {
             position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             z-index: 2;
             background: none;
             border: none;

@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////////////
 // 1. Configuration and helpers
 ////////////////////////////////////////////////////////
-@import "helpers/directions",
-"helpers/scrolling-animation",
-"abstract/variables",
+@import "abstract/variables",
 "abstract/placeholder",
 "abstract/functions",
 "abstract/mixins",
-"abstract/animations";
+"abstract/animations",
+"helpers/directions",
+"helpers/scrolling-animation";
 
 ////////////////////////////////////////////////////////
 // 2. Vendors

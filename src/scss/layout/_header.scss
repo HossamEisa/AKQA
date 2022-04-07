@@ -450,29 +450,9 @@
             }
         }
 
-
-
-
-
         /* look and feel only, not needed for core menu*/
 
         // optional animation for display none/block
-        @keyframes grow {
-            0% {
-                display: none;
-                opacity: 0;
-            }
-
-            50% {
-                display: block;
-                opacity: 0.5;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
         .menu-dropdown a {
             padding: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -563,7 +543,6 @@
 }
 
 #search-mob {
-    margin-: 15px;
     width: 95%;
     height: 51px;
     background: url('../images/search-icon.svg') no-repeat 8px 6px;

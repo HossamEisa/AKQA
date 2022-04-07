@@ -5,10 +5,6 @@
 /**
  * Set up a decent box model on the root element
  */
-
-
-
-
 *,
 ::after,
 ::before {
@@ -28,11 +24,7 @@ body {
   height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-
- 
 }
-
-
 
 
 ::selection {
@@ -40,15 +32,3 @@ body {
   color: #fff;
 }
 
-/**
- * Basic styles for links
- */
-a {
-  text-decoration: none;
-}
-
-p {
-  &:last-child {
-    margin-bottom: 0;
-  }
-}

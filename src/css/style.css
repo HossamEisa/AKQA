@@ -1,30 +1,62 @@
 @charset "UTF-8";
-/**
- * Flips any values
- */
-/**
- * Flips left for right, right for left
- */
-.js-scroll {
-  opacity: 0;
-  transition: opacity 500ms;
+/*=======================
+    Colors
+=======================*/
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: #00609C #FFF;
+  /* Handle */
 }
-.js-scroll.scrolled {
-  opacity: 1;
+:root::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
 }
-.js-scroll.scrolled.fade-in {
-  animation: fade-in 1s ease-in-out both;
-}
-.js-scroll.scrolled.fade-in-bottom {
-  animation: fade-in-bottom 1s ease-in-out both;
-}
-.js-scroll.scrolled.slide-left {
-  animation: slide-in-left 1s ease-in-out both;
-}
-.js-scroll.scrolled.slide-right {
-  animation: slide-in-right 1s ease-in-out both;
+:root::-webkit-scrollbar-thumb {
+  background: #00609C;
 }
 
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+    01. Convert from px to rem
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+@keyframes movebtn {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes loading {
+  0% {
+    width: 50pt;
+    height: 50pt;
+    margin-top: 0;
+  }
+  25% {
+    height: 4pt;
+    margin-top: 23pt;
+  }
+  50% {
+    width: 4pt;
+  }
+  75% {
+    width: 50pt;
+  }
+  100% {
+    width: 50pt;
+    height: 50pt;
+    margin-top: 0;
+  }
+}
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-100px);
@@ -69,68 +101,45 @@
     opacity: 1;
   }
 }
-/*=======================
-    Colors
-=======================*/
-:root {
-  scrollbar-width: thin;
-  scrollbar-color: #00609C #FFF;
-  /* Handle */
-}
-:root::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-:root::-webkit-scrollbar-thumb {
-  background: #00609C;
-}
-
-/* ----------------------------------------------------------------------------------------------------------------------------------------------------
-    01. Convert from px to rem
----------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* CSS - Box Shadow */
-/* Margin Auto */
-/* Border-raduis */
-/***************************************/
-@keyframes progress {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes shacke {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
-  }
-}
-@keyframes movebtn {
+@keyframes grow {
   0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(20px);
+    display: none;
+    opacity: 0;
   }
   50% {
-    transform: translateY(0px);
-  }
-  75% {
-    transform: translateY(-20px);
+    display: block;
+    opacity: 0.5;
   }
   100% {
-    transform: translateY(0px);
+    opacity: 1;
   }
 }
+/**
+ * Flips any values
+ */
+/**
+ * Flips left for right, right for left
+ */
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.js-scroll.scrolled {
+  opacity: 1;
+}
+.js-scroll.scrolled.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}
+.js-scroll.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+.js-scroll.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+.js-scroll.scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?ty186d");
@@ -207,17 +216,6 @@ body {
 ::selection {
   background: #00609C;
   color: #fff;
-}
-
-/**
- * Basic styles for links
- */
-a {
-  text-decoration: none;
-}
-
-p:last-child {
-  margin-bottom: 0;
 }
 
 @font-face {
@@ -364,6 +362,14 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 .header {
@@ -733,19 +739,6 @@ table {
     display: none;
   }
 }
-@keyframes grow {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  50% {
-    display: block;
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .header .header-nav .menu-dropdown a {
   padding: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -824,7 +817,6 @@ table {
 }
 
 #search-mob {
-  margin-: 15px;
   width: 95%;
   height: 51px;
   background: url("../images/search-icon.svg") no-repeat 8px 6px;
@@ -1167,30 +1159,9 @@ input[type=search]::-webkit-search-results-decoration {
   padding-top: 15px;
   text-align: center;
   color: #00609C;
+  font-family: bold-font;
 }
 
-@keyframes loading {
-  0% {
-    width: 50pt;
-    height: 50pt;
-    margin-top: 0;
-  }
-  25% {
-    height: 4pt;
-    margin-top: 23pt;
-  }
-  50% {
-    width: 4pt;
-  }
-  75% {
-    width: 50pt;
-  }
-  100% {
-    width: 50pt;
-    height: 50pt;
-    margin-top: 0;
-  }
-}
 .tips-item {
   padding-left: 15px;
   padding-right: 15px;
@@ -1273,6 +1244,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: #C017A2;
   margin-top: 20px;
   line-height: 1.8;
+  transition: 0.3s ease all;
 }
 .tips-item .tip-link:hover {
   color: #00609C;
@@ -1290,7 +1262,7 @@ input[type=search]::-webkit-search-results-decoration {
   width: 50px;
   color: #FFF;
   cursor: pointer;
-  animation: movebtn 3s ease-in-out infinite;
+  animation: movebtn 5s linear infinite;
   transition: all 0.5s ease-in-out;
   font-size: 40px;
   display: flex;
@@ -1504,7 +1476,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media only screen and (min-width: 1600px) {
   .hero-carousel .carousel > ul .slide .content {
-    left: 20%;
+    left: 21%;
     top: 30px;
   }
 }
@@ -1521,6 +1493,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .hero-carousel .carousel .carousel-button {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
   background: none;
   border: none;

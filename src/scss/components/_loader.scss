@@ -33,31 +33,5 @@
     padding-top: 15px;
     text-align: center;
     color: $primary;
-}
-
-@keyframes loading {
-    0% {
-        width: 50pt;
-        height: 50pt;
-        margin-top: 0;
-    }
-
-    25% {
-        height: 4pt;
-        margin-top: 23pt;
-    }
-
-    50% {
-        width: 4pt;
-    }
-
-    75% {
-        width: 50pt;
-    }
-
-    100% {
-        width: 50pt;
-        height: 50pt;
-        margin-top: 0;
-    }
+    font-family: $bold-font;
 }

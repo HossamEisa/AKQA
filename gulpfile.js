@@ -48,8 +48,8 @@
        //  custom
        'src/js/navMenu.js',
        'src/js/backTop.js',
-       'src/js/scroll-animation.js',
-       'src/js/carousel-custom.js',
+       'src/js/scrolling.js',
+       'src/js/carousel.js',
        'src/js/loading.js',
      ])
      .pipe(terser())
